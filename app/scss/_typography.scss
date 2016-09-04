@@ -1,0 +1,18 @@
+@mixin font-face($name, $path) {
+    $filepath: quote($path + $name);
+    @font-face {
+        font-family: "#{$name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+             url($filepath + ".woff") format('woff'),
+             url($filepath + ".woff2") format('woff2'),
+             url($filepath + ".ttf") format('truetype'),
+             url($filepath + ".svg#" + $name + "") format('svg');
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+@include font-face('AleoLight', '../fonts/aleo/');
+@include font-face('AleoRegular', '../fonts/aleo/');
+@include font-face('AleoBold', '../fonts/aleo/');

@@ -1,0 +1,15 @@
+@mixin font-size($sizeValue: 1.6, $important: '') {
+    font-size: ($sizeValue * 10) + px unquote($important);
+    font-size: $sizeValue + rem unquote($important);
+}
+
+@mixin line-height($heightValue: 1.6) {
+    line-height: ($heightValue * 10) + px;
+    line-height: $heightValue + rem;
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}

@@ -1,0 +1,93 @@
+.header {
+    &__menu {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        left: 0;
+        padding-top: 54px;
+
+        &--scroll {
+            padding: 15px 0;
+            z-index: 10;
+        }
+
+        &__item {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 1px;
+
+            &--highlighted {
+                font-weight: bold;
+            }
+
+            a {
+                color: $black;
+                display: block;
+                @include font-size(1);
+                padding: 0 19px;
+                text-align:center;
+            }
+
+            &--lang a {
+                color: $blue;
+                border: 1px solid $blue;
+                padding: 2px;
+            }
+
+            &--facebook img {
+                width: 22px;
+            }
+        }
+    }
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color:#fff;
+    background:#19c589;
+    text-align:center;
+    padding:16px 0;
+    display:none;
+    width:100%!important
+}
+
+/*Hide checkbox*/
+input[type=checkbox] {
+    display:none
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu {
+    display:block;
+    margin:0 auto
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 835px) {
+    /*Make dropdown links appear inline*/
+    .header ul {
+        position:static;
+        display:none;
+        white-space: initial;
+    }
+    
+    /*Create vertical spacing*/
+    .header li {
+        margin-bottom:1px
+    }
+    
+    /*Make all menu links full width*/
+    .header ul li, .header li a {
+        width:100%
+    }
+    
+    /*Display 'show menu' link*/
+    .show-menu {
+        display:block
+    }
+}

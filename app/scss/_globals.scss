@@ -1,0 +1,39 @@
+// typography
+$fontLight:   'AleoLight', 'Roboto Slab';
+$fontRegular: 'AleoRegular', 'Roboto Slab';
+$fontBold:    'AleoBold', 'Roboto Slab';
+
+// colors
+$black:        #231f20;
+$blue:         #2e3192;
+$blue-darker:  #b0c6ea;
+$blue-darkest: #2c3792;
+$yellow:       #fff53a;
+$green:        #6bc62e;
+$green-darker: #40bb6a;
+
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 65em;
+ 
+// breakpoints
+$breakpoint-small:  "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+
+body {
+	font-family: $fontRegular;
+	color: $black;
+}
+
+img {
+	max-width: 100%;
+}
+
+strong {
+	font-family: $fontBold;
+}
+
+a {
+	text-decoration: none;
+	color: $black;
+}

@@ -1,0 +1,21 @@
+{
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "expr" : true,
+    "forin": true,
+    "immed": true,
+    "indent": 4,
+    "noarg": true,
+    "node": true,
+    "nonbsp": true,
+    "quotmark": "single",
+    "undef": true,
+    "unused": "vars",
+    "trailing": true,
+    "globals": {
+        "$": false,
+        "window": false,
+        "document": false
+    }
+}
