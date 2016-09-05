@@ -15,6 +15,7 @@
     "trailing": true,
     "globals": {
         "$": false,
+        "jQuery": false,
         "window": false,
         "document": false
     }

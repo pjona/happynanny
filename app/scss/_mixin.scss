@@ -1,15 +1,50 @@
-@mixin font-size($sizeValue: 1.6, $important: '') {
-    font-size: ($sizeValue * 10) + px unquote($important);
-    font-size: $sizeValue + rem unquote($important);
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
 }
 
-@mixin line-height($heightValue: 1.6) {
-    line-height: ($heightValue * 10) + px;
-    line-height: $heightValue + rem;
+@mixin rem($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value*16}px;
+
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+        }
+    }
+
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + $value}rem;
+
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
 }
 
 @mixin border-box {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; 
+}
+
+@mixin transform($deg) {
+    -webkit-transform: rotate($deg + deg);
+    -moz-transform: rotate($deg + deg);
+    -o-transform: rotate($deg + deg);
+    transform: rotate($deg + deg);
+}
+
+@mixin transition($sec) {
+    -webkit-transition: $sec + s ease-in-out;
+    -moz-transition: $sec + s ease-in-out;
+    -o-transition: $sec + s ease-in-out;
+    transition: $sec + s ease-in-out;
 }
