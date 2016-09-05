@@ -9,7 +9,7 @@
 
 h1 {
     font-family: $fontBold;
-    @include font-size(2);
+    @include rem(font-size, 2);
     text-transform: uppercase;
     text-align: center;
     margin: 20px 0;
@@ -17,8 +17,8 @@ h1 {
 
 p {
     margin-bottom: 10px;
-    @include font-size(1);
-    @include line-height(1.2);
+    @include rem(font-size, 1);
+    @include rem(line-height, 1.2);
 }
 
 #why {
@@ -45,7 +45,7 @@ p {
 
         h1 {
             height: 500px;
-            line-height: 44px;
+            @include rem(line-height, 2.750);
             background-color: $yellow;
             padding-top: 62px;
             text-transform: none;
@@ -119,7 +119,7 @@ p {
                 text-align: center;
 
                 h2 {
-                    @include font-size(1.9);
+                    @include rem(font-size, 1.9);
                     font-family: $fontBold;
                     margin: 80px 0;
                 }
@@ -213,12 +213,15 @@ p {
 
     .row {
         position: relative;
+
+        small {
+            @include rem(font-size, 1);
+        }
     }
 
-
     .price__item {
-        @include font-size(1.425);
-        line-height: 30px;
+        @include rem(font-size, 1.425);
+        @include rem(line-height, 1.875);
 
         span:first-child {
             float: left;
@@ -243,10 +246,6 @@ p {
             top: -66px;
         }
     }
-
-    small {
-        @include font-size(0.9, !important);
-    }
 }
 
 #carrier {
@@ -259,7 +258,7 @@ p {
     button {
         background-color: $blue-darkest;
         border-radius: 17px;
-        font-size: 30px;
+        @include rem(font-size, 1.875);
         padding: 4px 28px;
         color: #fff;
         margin-top: 20px;
@@ -294,12 +293,12 @@ p {
 
 @media #{$breakpoint-small} {
     h1 {
-        @include font-size(1.5);
+        @include rem(font-size, 1.5);
     } 
 }
 
 @media #{$breakpoint-medium} {
     h1 {
-        @include font-size(2);
+        @include rem(font-size, 2);
     } 
 }
