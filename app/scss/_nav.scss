@@ -51,7 +51,7 @@
 }
 
 /* Mobile */
-$hamburgerWidth: 15;
+$mobileMenuWidth: 15;
 $hamburgerSpanTop: 0.875;
 @media #{$breakpoint-small} {
     section {
@@ -60,13 +60,13 @@ $hamburgerSpanTop: 0.875;
 
     .header {
         &__menu {
-            @include rem(left, $hamburgerWidth * -1);
+            @include rem(left, $mobileMenuWidth * -1);
             position: fixed;
 
             &--open {
                 background: #fff;
-                @include rem(width, $hamburgerWidth);
-                @include rem(height, $hamburgerWidth * 2);
+                @include rem(width, $mobileMenuWidth);
+                @include rem(height, $mobileMenuWidth * 2);
 
                 .header__menu__item {
                     width: 100%;

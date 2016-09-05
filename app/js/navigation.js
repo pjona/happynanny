@@ -19,6 +19,8 @@ var nav = (function() {
         self.$hamburger = $('.header__hamburger');
         self.$hash = '';
         self.$hamburgerOpen = false;
+        self.$mobileMenuWidth = '240px';
+        self.sections = $('section').not('section section');
     };
 
     var load = function() {
@@ -45,36 +47,44 @@ var nav = (function() {
 
     // Clicks
     var clickMenuItem = function(event) {
-        self.$hamburger.click();
+        closeHambuger();
         $('.header__menu--open .header__menu__item a').unbind('click');
     };
 
+    // Hamburger
     var clickHambuger = function(event) {
-        var hamburger = $(event.target).closest('.header__hamburger');
-        var sections = $('section').not('section section');
-        var width = '240px';
-
         if (self.$hamburgerOpen === false) {
-            hamburger.addClass('header__hamburger--open');
-            self.$menu.addClass('header__menu--open');
-            self.$menu.animate({ left: '0' }, 600);
-            self.$hamburger.animate({ left: width }, 0);
-            sections.css('opacity', '0.4');
-            sections.animate({ left: width }, 600);
-            self.$hamburgerOpen = true;
-            // close menu when user clicked some position of menu
-            $('.header__menu--open .header__menu__item a').bind('click', clickMenuItem);
+            showHambuger();
         } else {
-            self.$menu.animate({ left: '-' + width }, 600);
-            self.$hamburger.animate({ left: '15px' }, 0);
-            sections.animate({ left: '0' }, 600, function() {
-                self.$menu.removeClass('header__menu--open');
-                sections.css('opacity', '1');
-            });
-            self.$hamburgerOpen = false;
-            hamburger.removeClass('header__hamburger--open');
+            closeHambuger();
         }
     };
+
+    var showHambuger = function() {
+        self.$hamburgerOpen = true;
+
+        self.$hamburger.addClass('header__hamburger--open');
+        self.$menu.addClass('header__menu--open');
+        self.$menu.animate({ left: '0' }, 600);
+        self.$hamburger.animate({ left: self.$mobileMenuWidth }, 0);
+        self.sections.css('opacity', '0.4');
+        self.sections.animate({ left: self.$mobileMenuWidth }, 600);
+        // close menu when user clicked some position of menu
+        $('.header__menu--open .header__menu__item a').bind('click', clickMenuItem);
+    };
+
+    var closeHambuger = function() {
+        self.$hamburgerOpen = false;
+
+        self.$menu.animate({ left: '-' + self.$mobileMenuWidth }, 600);
+        self.$hamburger.animate({ left: '15px' }, 0);
+        self.sections.animate({ left: '0' }, 600, function() {
+            self.$menu.removeClass('header__menu--open');
+            self.sections.css('opacity', '1');
+        });
+        self.$hamburger.removeClass('header__hamburger--open');
+    };
+
 
     // Scrolls
     var scrollMenu = function(event) {
