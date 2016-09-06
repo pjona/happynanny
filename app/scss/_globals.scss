@@ -17,12 +17,16 @@ $grid-columns: 12;
 $grid-max-width: 65em;
  
 // breakpoints
-$breakpoint-small:  "only screen and (min-width: 20em)";
+$breakpoint-small:  "only screen and (min-width: 0em)";
 $breakpoint-medium: "only screen and (min-width: 30em)";
 
 body {
 	font-family: $fontRegular;
 	color: $black;
+}
+
+body > section {
+	opacity: 1;
 }
 
 img {

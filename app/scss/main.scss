@@ -21,6 +21,10 @@ p {
     @include rem(line-height, 1.2);
 }
 
+.opacity {
+    opacity: 0.4;
+}
+
 #why {
     margin-top: -355px;
     padding-top: 300px;
@@ -127,9 +131,16 @@ p {
         }
     }
 
-    .offer__footer {
-        height: 300px !important;
-        margin: -3px 0;
+    .offer {
+        &__background__header {
+            height: 160px;
+            background-color: $green-darker;
+        }
+
+        &__footer {
+            height: 300px !important;
+            margin: -3px 0;
+        }
     }
 }
 

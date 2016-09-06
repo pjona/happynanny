@@ -1,55 +1,3 @@
-/* Desktop */
-@media #{$breakpoint-medium} {
-    .header {
-        &__hamburger {
-            display: none;
-        }
-
-        &__menu {
-            width: 100%;
-            height: 50px;
-            text-align: center;
-            background: #fff;
-            top: 0;
-            left: 0 !important;
-            padding-top: 54px;
-
-            &--scroll {
-                padding: 15px 0;
-                z-index: 10;
-            }
-
-            &__item {
-                display: inline-block;
-                vertical-align: top;
-                margin-right: 1px;
-
-                &--highlighted {
-                    font-weight: bold;
-                }
-
-                a {
-                    color: $black;
-                    display: block;
-                    @include rem(font-size, 1);
-                    padding: 0 19px;
-                    text-align: center;
-                }
-
-                &--lang a {
-                    color: $blue;
-                    border: 1px solid $blue;
-                    padding: 2px;
-                }
-
-                &--facebook img {
-                    width: 22px;
-                }
-            }
-        }
-    }
-}
-
 /* Mobile */
 $mobileMenuWidth: 15;
 $hamburgerSpanTop: 0.875;
@@ -63,6 +11,19 @@ $hamburgerSpanTop: 0.875;
             @include rem(left, $mobileMenuWidth * -1);
             position: fixed;
 
+
+            &__item {
+                &--lang a {
+                    color: $blue;
+                    border: 1px solid $blue;
+                    padding: 2px;
+                }
+
+                &--facebook img {
+                    width: 22px;
+                }
+            }
+
             &--open {
                 background: #fff;
                 @include rem(width, $mobileMenuWidth);
@@ -71,9 +32,50 @@ $hamburgerSpanTop: 0.875;
                 .header__menu__item {
                     width: 100%;
                     text-align: center;
-                    @include rem(height, 2.3);
                     @include rem(line-height, 2.3);
                     text-transform: uppercase;
+
+                    &--has-submenu {
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 14px;
+                            left: 33px;
+                            width: 0;
+                            height: 0;
+                            margin-left: 4px;
+                            @include transition(0.2);
+                            @include transform(0);
+                            vertical-align: middle;
+                            border-top: 4px solid;
+                            border-right: 4px solid transparent;
+                            border-left: 4px solid transparent;
+                        }
+
+                        span {
+                            display: inline-block;
+                            width: 100%;
+                        }
+                    }
+
+                    &--has-open-submenu {
+                        &:before {
+                            @include transform(180);
+                        }
+                    }
+                }
+            }
+
+            &__submenu {
+                display: none;
+
+                &--show {
+                    display: block;
+                    background-color: $yellow;
+                }
+
+                li {
+                    @include rem(line-height, 1.5);
                 }
             }
         }
@@ -130,6 +132,60 @@ $hamburgerSpanTop: 0.875;
                     }
                 }
 
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpoint-medium} {
+    .header {
+        &__hamburger {
+            display: none;
+        }
+
+        &__menu {
+            position: static;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            background: #fff;
+            top: 0;
+            left: 0 !important;
+            padding-top: 54px;
+
+            &--sticky {
+                position: fixed;
+                padding: 15px 0;
+                z-index: 10;
+            }
+
+            &__item {
+                z-index: 10;
+                display: inline-block;
+                vertical-align: top;
+                margin-right: 1px;
+                position: relative;
+
+                &--highlighted {
+                    font-weight: bold;
+                }
+
+                a, span {
+                    color: $black;
+                    display: block;
+                    @include rem(font-size, 1);
+                    padding: 0 19px;
+                    text-align: center;
+                }
+            }
+
+            &__submenu {
+                background: #fff;
+                position: absolute;
+                left: -40px;
+                top: 15px;
+                padding-top: 20px;
             }
         }
     }
