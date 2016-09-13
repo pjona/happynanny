@@ -1,0 +1,15 @@
+#contact {
+    h1 {
+        text-align: left;
+    }
+
+    .contact__footer {
+        height: 200px;
+        background-color: $green-darker;
+        margin-top: -96px;
+    }
+
+    .row > div {
+        padding-bottom: 0;
+    }
+}

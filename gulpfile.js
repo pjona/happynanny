@@ -87,7 +87,7 @@ gulp.task('build', function (callback) {
 
 // Watcher
 gulp.task('watch', function() {
-    gulp.watch('app/scss/*.scss', ['sass']); 
+    gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/js/*.js', ['jshint']); 
 });
 

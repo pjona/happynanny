@@ -1,0 +1,38 @@
+/* Mobile */
+@media #{$breakpoint-small} {
+    .first {
+        text-align: center;
+        margin-top: 40px;
+
+        &__header {
+            margin-top: 60px;
+        }
+
+        &__content {
+            margin-top: -24px;
+
+            h1 {
+                height: 300px;
+                @include rem(line-height, 2.750);
+                background-color: $yellow;
+                padding-top: 62px;
+                text-transform: none;
+            }
+        }
+
+        &__footer {
+            margin-top: -230px;
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpoint-medium} {
+    .first {
+        &__content {
+            h1 {
+                height: 500px;
+            }
+        }
+    }
+}

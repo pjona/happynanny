@@ -1,0 +1,41 @@
+/* Mobile */
+@media #{$breakpoint-small} {
+    #english-nanny {
+        padding-bottom: 10%;
+
+        .wrapper {
+            position: relative;
+        }
+
+        .row {
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            div {
+                margin-top: 0;
+                padding-left: 1em;
+            }
+
+            h1 {
+                text-align: right;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpoint-medium} {
+    #english-nanny {
+        .row {
+            div {
+                margin-top: -92px;
+                padding-left: 67px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+}

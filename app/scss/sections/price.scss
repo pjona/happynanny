@@ -1,0 +1,42 @@
+#price {
+    background: $blue-darker url('../images/price_header.png') repeat-x top center;
+    padding-top: 100px;
+    margin-top: 200px;
+    padding-bottom: 150px;
+
+    .row {
+        position: relative;
+
+        small {
+            @include rem(font-size, 1);
+        }
+    }
+
+    .price__item {
+        @include rem(font-size, 1.425);
+        @include rem(line-height, 1.875);
+
+        span:first-child {
+            float: left;
+        }
+
+        span:last-child {
+            text-align: right;
+            display: block;
+        }
+    }
+
+    .price__header {
+        position: absolute;
+
+        &--left {
+            left: -150px;
+            top: -100px;
+        }
+
+        &--right {
+            right: 10px;
+            top: -66px;
+        }
+    }
+}

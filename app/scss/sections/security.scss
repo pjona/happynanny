@@ -1,0 +1,14 @@
+#security {
+    background: $yellow url('../images/security_header.png') repeat-x top center;
+    padding-top: 115px;
+    padding-bottom: 17%;
+
+    ol {
+        list-style-type: decimal;
+
+        li {
+            margin-left: 15px;
+            margin-bottom: 8px;
+        }
+    }
+}

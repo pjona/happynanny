@@ -1,0 +1,89 @@
+#offer {
+    .wrapper {
+        position: relative;
+    }
+
+    .row {
+        &.content {
+            position: absolute;
+            top: 0;
+            width: 100%;
+
+            div {
+                padding-top: 175px;
+                text-align: center;
+
+                h2 {
+                    @include rem(font-size, 1.9);
+                    font-family: $fontBold;
+                    margin: 80px 0;
+                }
+            }
+        }
+    }
+
+    .offer {
+        &__background__header {
+            height: 160px;
+            background-color: $green-darker;
+        }
+
+        &__footer {
+            height: 300px !important;
+            margin: -3px 0;
+        }
+    }
+}
+
+#for-parents {
+    .modal__content {
+        position: relative;
+
+        > div {
+            float: none;
+        }
+    }
+
+    .for__parents {
+        &__header h1 {
+            margin-top: 162px;
+            text-align: left;
+        }
+
+        &__img {
+            position: absolute;
+            right: 0;
+            top: 51px;
+        }
+    }
+}
+
+#for-bussines {
+    .for__bussines {
+        &__header {
+            float: left;
+
+            h1 {
+                text-align: left;
+            }
+        }
+
+        &__img {
+            float: right;
+            padding-right: 0;
+            text-align: right;
+
+            &--footer {
+                float: none;
+            }
+
+            img {
+                margin-right: -20px;
+            }
+        }
+
+        &__content {
+            float: none;
+        }
+    }
+}
