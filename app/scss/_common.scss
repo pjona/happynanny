@@ -6,23 +6,19 @@ h1 {
     margin: 20px 0;
 }
 
-p {
-    margin-bottom: 10px;
-    @include rem(font-size, 1);
-    @include rem(line-height, 1.2);
-}
-
 .opacity {
     opacity: 0.4;
 }
 
-@media #{$breakpoint-small} {
+@media #{$breakpointSmall} {
     h1 {
         @include rem(font-size, 1.5);
     } 
 }
 
-@media #{$breakpoint-medium} {
+@media #{$breakpointMedium} {
+    @include desktopParagraph();
+
     h1 {
         @include rem(font-size, 2);
     } 

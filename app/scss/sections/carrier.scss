@@ -1,27 +1,36 @@
-#carrier {
-    padding-top: 10%;
-    margin: 300px 0;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .carrier {
+        padding-top: 300px;
 
-    h1 {
-        text-align: left;
+        h1 {
+            text-align: left;
+        }
+
+        button {
+            background-color: $blueDarkest;
+            border-radius: 17px;
+            @include rem(font-size, 1.875);
+            padding: 4px 28px;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        &__footer {
+            height: 100%;
+            background-color: $green;
+            margin-top: -2px;
+        }
+
+        .row > div {
+            padding-bottom: 0;
+        }
     }
+}
 
-    button {
-        background-color: $blue-darkest;
-        border-radius: 17px;
-        @include rem(font-size, 1.875);
-        padding: 4px 28px;
-        color: #fff;
-        margin-top: 20px;
-    }
-
-    .carrier__footer {
-        height: 300px;
-        background-color: $green;
-        margin-top: -2px;
-    }
-
-    .row > div {
-        padding-bottom: 0;
+/* Mozzila only */
+@-moz-document url-prefix() {
+    .carrier {
+        padding-top: 100px;
     }
 }

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Happy Nanny</title>
         <!--build:css css/main.min.css-->
+        <link rel="stylesheet" href="../node_modules/fullpage.js/jquery.fullPage.css">
         <link rel="stylesheet" href="css/main.css">
         <!--endbuild-->
     </head>
@@ -20,31 +21,32 @@
                             <span></span>
                             <span></span>
                         </div>
+
                         <ul class="header__menu">
                             <li class="header__menu__item header__menu__item--has-submenu">
                                 <span>o nas</span>
                                 <ul class="header__menu__submenu">
-                                    <li><a href="#why">dlaczego my?</a></li>
-                                    <li><a href="#mission">misja</a></li>
-                                    <li><a href="#team">zespół</a></li>
-                                    <li><a href="#security">bezpieczeństwo</a></li>
-                                    <li><a href="#partners">partnerzy</a></li>
+                                    <li data-menuanchor="why"><a href="#why">dlaczego my?</a></li>
+                                    <li data-menuanchor="mission"><a href="#mission">misja</a></li>
+                                    <li data-menuanchor="team"><a href="#team">zespół</a></li>
+                                    <li data-menuanchor="security"><a href="#security">bezpieczeństwo</a></li>
+                                    <li data-menuanchor="partners"><a href="#partners">partnerzy</a></li>
                                 </ul>
                             </li>
-                            <li class="header__menu__item">
-                                <a href="#offer" data-ps2id-offset="20">oferta</a>
+                            <li data-menuanchor="offer" class="header__menu__item">
+                                <a href="#offer">oferta</a>
                             </li>
-                            <li class="header__menu__item">
-                                <a href="#english-nanny" data-ps2id-offset="200">niania z angielskim</a>
+                            <li data-menuanchor="english-nanny" class="header__menu__item">
+                                <a href="#english-nanny">niania z angielskim</a>
                             </li>
-                            <li class="header__menu__item">
-                                <a href="#price" data-ps2id-offset="110">cennik</a>
+                            <li data-menuanchor="price" class="header__menu__item">
+                                <a href="#price">cennik</a>
                             </li>
-                            <li class="header__menu__item">
-                                <a href="#carrier" data-ps2id-offset="100">praca</a>
+                            <li data-menuanchor="carrier" class="header__menu__item">
+                                <a href="#carrier">praca</a>
                             </li>
                             <!-- <li class="header__menu__item"><a href="#shop">sklep</a></li> -->
-                            <li class="header__menu__item"><a href="#contact">kontakt</a></li>
+                            <li data-menuanchor="contact" class="header__menu__item"><a href="#contact">kontakt</a></li>
                             <li class="header__menu__item header__menu__item--facebook">
                                 <a href="#"><img src="images/facebook.png"></a>
                             </li>
@@ -57,298 +59,306 @@
             </div>
         </nav>
 
-        <section class="first">
-            <img class="first__header" src="images/first_header.png">
-            <div class="first__content">
-                <h1>Wyjątkowa niania dla Twojego dziecka</h1>
-            </div>
-            <img class="first__footer" src="images/first_footer.png">
-        </section>
-
-        <section id="why">
-            <div class="wrapper">
-                <div class="row jojoj">
-                    <div class="column-9 column-center">
-                        <h1>Dlaczego Happy Nanny?</h1>
-                        <p>Opieka nad dzieckiem może odbywać się wyłącznie w języku angielskim - nasze nianie posiadają kwalifikacje do nauczania angielskiego oraz przeszły szkolenia Happy Nanny</p>
-                        <p>Opiekujemy się dziećmi, a także edukujemy i rozwijamy – razem z nami dzieci w naturalny sposób przyswoją język angielski, a także będą brać udział w specjalnie przygotowanych zajęciach tematycznych, plastycznych, rytmicznych i ruchowych</p>
-                        <p>Nasze nianie zawsze wyposażone są w materiały edukacyjne (w tym także te przygotowane przez nas) dostosowane do wymagań rodziców i interesujące dla dziecka. Nasze nianie zaopiekują się dziećmi o specjalnych potrzebach edukacyjnych</p>
-                        <p>Jesteśmy rozwiązaniem dla turystów oraz zagranicznych gości szukających opieki dla swoich dzieci</p>
-                        <p>Docieramy do klientów na terenie Trójmiasta oraz Rumi, Redy, Wejherowa a także okolic</p>
-                    </div>
+        <div id="fullpage">
+            <section class="first" id="section0">
+                <img class="first__header" src="images/first_header.png">
+                <div class="first__content">
+                    <h1>Wyjątkowa niania dla Twojego dziecka</h1>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="mission">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-7">
-                        <img class="mission__img" src="images/mission_img.png">
-                    </div>
-                    <div class="column-5">
-                        <h1>Nasza misja</h1>
-                        <p>Chcemy dać rodzicom możliwość korzystania z czasu wolnego, a także samorealizacji i kontynuowania kariery po narodzinach dziecka. Opiekujemy się i organizujemy dzieciom czas wolny w ciekawy i kreatywny sposób. Stanowimy nie tylko alternatywę, ale również uzupełnienie zajęć przedszkolnych i szkolnych – Happy Nanny to połączenie zabawy z edukacją.<br />
-                        Naszym głównym celem jest zapewnienie opieki dzieciom w wieku od 3 miesięcy do 12 roku życia.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="team">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-9">
-                        <h1>Zespół</h1>
-                        <p><strong>Małgorzata Bach</strong>  - absolwentka Uniwersytetu Gdańskiego, ukończyła studia pedagogiczne  o specjalności wczesna edukacja i terapia pedagogiczna. Pracowała w anglojęzycznym przedszkolu oraz opiekowała się dziećmi autystycznymi. Od wielu lat udziela korepetycji oraz pracuje jako niania. Aktualnie terapeutka w jednym z trójmiejskich placówek zajmujących się terapią dzieci.</p>
-                        <p><strong>Dobrawa Aleksiak</strong> – absolwentka Uniwersytetu Gdańskiego i Uniwersytetu Adama Mickiewicza. Zainteresowana edukacją globalną i nieformalną oraz naturalną metodą nauki języków obcych. Swoje doświadczenie w pracy z dziećmi zdobywała w anglojęzycznym przedszkolu, na studiach i stażu w Portugalii, na wolontariacie w świetlicy w Kolumbii oraz podczas prowadzenia autorskich warsztatów na temat edukacji globalnej w przedszkolach, świetlicach i szkołach.</p>
-                        <p><strong>Małgorzata Aleksiak</strong> – Wsparcie merytoryczne I metodyczne.<br />wieloletni dyrektor gdyńskiego przedszkola, nauczyciel dyplomowany, absolwentka Uniwersytetu Gdańskiego – pedagogiki wczesnoszkolnej i  wychowania przedszkolnego oraz studiów podyplomowych: terapia pedagogiczna, zarządzanie oświatą, edukator wychowania przedszkolnego.</p>
-                    </div>
-                    <div class="column-3">
-                        <img class="team__img" src="images/team_img.png">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="security">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-7">
-                        <img class="mission__img" src="images/security_img.png">
-                    </div>
-                    <div class="column-5">
-                        <h1>Bezpieczeństwo</h1>
-                        <p>Bezpieczeństwo dzieci jest filarem naszej działalności. Nasze nianie przechodzą poniższe etapy rekrutacji:</p>
-                        <ol>
-                            <li>rozmowa kwalifikacyjna prowadzona przez doświadczonego psychologa</li>
-                            <li>obserwacja pracy niani z dziećmi prowadzona przez doświadczonego psychologa</li>
-                            <li>kurs pierwszej pomocy</li>
-                            <li>szkolenie przygotowujące do pracy w Happy Nanny</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="partners">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-8">
-                        <h1>Partnerzy</h1>
-                        <div class="row">
-                            <div class="column-4 column-6-mobile partner__item">
-                                <a href="">
-                                    <img src="images/partner_1.png">
-                                    <span>Pomorska poradia<br />psychologiczno-pedagogiczna</span>
-                                </a>
-                            </div>
-
-                            <div class="column-4 column-6-mobile partner__item">
-                                <a href="">
-                                    <img src="images/partner_2.png">
-                                    <span>TUPTUSIE<br />sieć przedszkoli integracyjnych</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column-4 column-6-mobile partner__item">
-                                <a href="">
-                                    <img src="images/partner_3.png">
-                                    <span>SOCATOTS<br />zajęcia piłkarskie<br />dla dzieci</span>
-                                </a>
-                            </div>
-
-                            <div class="column-4 column-6-mobile partner__item">
-                                <a href="">
-                                    <img src="images/partner_4.png">
-                                    <span>CHILLOUT<br />przestrzeń przyjazna matkom z dziećmi</span>
-                                </a>
-                            </div>
+            <section class="why" id="section1">
+                <div class="why__background"></div>
+                <img class="why__header" src="images/why_header.png">
+                <div class="why__content wrapper">
+                    <div class="row">
+                        <div class="column-9 column-center">
+                            <h1>Dlaczego Happy Nanny?</h1>
+                            <p>Opieka nad dzieckiem może odbywać się wyłącznie w języku angielskim - nasze nianie posiadają kwalifikacje do nauczania angielskiego oraz przeszły szkolenia Happy Nanny.</p>
+                            <p>Opiekujemy się dziećmi, a także edukujemy i rozwijamy – razem z nami dzieci w naturalny sposób przyswoją język angielski, a także będą brać udział w specjalnie przygotowanych zajęciach tematycznych, plastycznych, rytmicznych i ruchowych.</p>
+                            <p>Nasze nianie zawsze wyposażone są w materiały edukacyjne (w tym także te przygotowane przez nas) dostosowane do wymagań rodziców i interesujące dla dziecka. Nasze nianie zaopiekują się dziećmi o specjalnych potrzebach edukacyjnych.</p>
+                            <p>Jesteśmy rozwiązaniem dla turystów oraz zagranicznych gości szukających opieki dla swoich dzieci.</p>
+                            <p>Docieramy do klientów na terenie Trójmiasta oraz Rumi, Redy, Wejherowa a także okolic.</p>
                         </div>
                     </div>
-                    <div class="column-4">
-                        <img class="partners__img" src="images/partners_img.png">
-                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="offer">
-            <div class="offer__background__header"></div>
-            <div class="wrapper">
-                <img src="images/offer_background_header.png">
-                <div class="row content">
-                    <div class="column-3 column-center">
-                        <h1>Oferta</h1>
-
-                        <h2 class="modal__click" data-modal="for-parents">Dla rodziców</h2>
-                        <h2 class="modal__click" data-modal="for-bussines">Dla biznesu</h2>
-                    </div>
-                </div>
-                <!-- for parents -->
-                <div id="for-parents" class="row modal">
-                    <div class="modal__content">
-                        <span class="modal__close">×</span>
-                        <div class="column-5 for__parents__header">
-                            <h1>Rodzice</h1>
+            <section class="mission" id="section2">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-7">
+                            <img class="mission__img" src="images/mission_img.png">
                         </div>
-                        <img src="images/offer_for_parents_background.png" class="for__parents__img" />
+                        <div class="column-5 mission__content">
+                            <h1>Nasza misja</h1>
+                            <p>Chcemy dać rodzicom możliwość korzystania z czasu wolnego, a także samorealizacji i kontynuowania kariery po narodzinach dziecka. Opiekujemy się i organizujemy dzieciom czas wolny w ciekawy i kreatywny sposób. Stanowimy nie tylko alternatywę, ale również uzupełnienie zajęć przedszkolnych i szkolnych – Happy Nanny to połączenie zabawy z edukacją.</p>
+                            <p>Naszym głównym celem jest zapewnienie opieki dzieciom w wieku od 3 miesięcy do 12 roku życia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="team" id="section3">
+                <div class="wrapper">
+                    <div class="row">
                         <div class="column-9">
-                            <p>W Happy Nanny zapewniamy opiekę na najwyższym poziomie, dostosowaną do potrzeb dziecka i rodziców. Nasze kompetentne, troskliwe i kreatywne nianie zapewnią bezpieczeństwo, szczególną uwagę i ciekawe zajęcia dla Państwa dziecka.<br />
-                            W naszej ofercie znajdą Państwo:</p>
+                            <h1>Zespół</h1>
+                            <p><strong>Małgorzata Bach</strong>  - absolwentka Uniwersytetu Gdańskiego, ukończyła studia pedagogiczne  o specjalności wczesna edukacja i terapia pedagogiczna. Pracowała w anglojęzycznym przedszkolu oraz opiekowała się dziećmi autystycznymi. Od wielu lat udziela korepetycji oraz pracuje jako niania. Aktualnie terapeutka w jednym z trójmiejskich placówek zajmujących się terapią dzieci.</p>
+                            <p><strong>Dobrawa Aleksiak</strong> – absolwentka Uniwersytetu Gdańskiego i Uniwersytetu Adama Mickiewicza. Zainteresowana edukacją globalną i nieformalną oraz naturalną metodą nauki języków obcych. Swoje doświadczenie w pracy z dziećmi zdobywała w anglojęzycznym przedszkolu, na studiach i stażu w Portugalii, na wolontariacie w świetlicy w Kolumbii oraz podczas prowadzenia autorskich warsztatów na temat edukacji globalnej w przedszkolach, świetlicach i szkołach.</p>
+                            <p><strong>Małgorzata Aleksiak</strong> – Wsparcie merytoryczne I metodyczne.<br />wieloletni dyrektor gdyńskiego przedszkola, nauczyciel dyplomowany, absolwentka Uniwersytetu Gdańskiego – pedagogiki wczesnoszkolnej i  wychowania przedszkolnego oraz studiów podyplomowych: terapia pedagogiczna, zarządzanie oświatą, edukator wychowania przedszkolnego.</p>
+                        </div>
+                        <div class="column-3">
+                            <img class="team__img" src="images/team_img.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="security" id="section4">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-7">
+                            <img class="security__img" src="images/security_img.png">
+                        </div>
+                        <div class="column-5">
+                            <h1>Bezpieczeństwo</h1>
+                            <p>Bezpieczeństwo dzieci jest filarem naszej działalności. Nasze nianie przechodzą poniższe etapy rekrutacji:</p>
+                            <ol>
+                                <li>rozmowa kwalifikacyjna prowadzona przez doświadczonego psychologa</li>
+                                <li>obserwacja pracy niani z dziećmi prowadzona przez doświadczonego psychologa</li>
+                                <li>kurs pierwszej pomocy</li>
+                                <li>szkolenie przygotowujące do pracy w Happy Nanny</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners fp-noscroll" id="section5">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-8">
+                            <h1>Partnerzy</h1>
+                            <div class="row">
+                                <div class="column-4 column-6-mobile partners__item">
+                                    <a href="">
+                                        <img src="images/partner_1.png">
+                                        <span>Pomorska poradia<br />psychologiczno-pedagogiczna</span>
+                                    </a>
+                                </div>
+
+                                <div class="column-4 column-6-mobile partners__item">
+                                    <a href="">
+                                        <img src="images/partner_2.png">
+                                        <span>TUPTUSIE<br />sieć przedszkoli integracyjnych</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column-4 column-6-mobile partners__item">
+                                    <a href="">
+                                        <img src="images/partner_3.png">
+                                        <span>SOCATOTS<br />zajęcia piłkarskie<br />dla dzieci</span>
+                                    </a>
+                                </div>
+
+                                <div class="column-4 column-6-mobile partners__item">
+                                    <a href="">
+                                        <img src="images/partner_4.png">
+                                        <span>CHILLOUT<br />przestrzeń przyjazna matkom z dziećmi</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column-4">
+                            <img class="partners__img" src="images/partners_img.png">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer" id="section6">
+                <div class="offer__background__header"></div>
+                <div class="wrapper">
+                    <img src="images/offer_background_header.png">
+                    <div class="row content">
+                        <div class="column-3 column-center">
+                            <h1>Oferta</h1>
+
+                            <h2 class="modal__click" data-modal="for-parents">Dla rodziców</h2>
+                            <h2 class="modal__click" data-modal="for-bussines">Dla biznesu</h2>
+                        </div>
+                    </div>
+                    <div class="offer__footer">
+                        <img src="images/offer_english-nanny_background.png">
+                    </div>
+                </div>
+            </section>
+
+            <section class="english-nanny" id="section7">
+                <div class="wrapper">
+                    <img src="images/offer_english-nanny_background.png" class="english-nanny__header">
+                    <img src="images/english_nanny_background.png" class="english-nanny__background">
+                    <div class="row">
+                        <div class="column-7 column-center">
+                            <h1>Niania z angielskim</h1>
+
+                            <p>Aby nauka języka obcego przynosiła pożądane efekty należy zacząć ją najlepiej już od 1 roku życia. Pozwala to „osłuchać się” z obcym językiem, co wpływa na rozwój kompetencji komunikacyjnych. Dzieci posiadają naturalną zdolność do nauki języków obcych, ich aparat mowy jest bardzo elastyczny i chłonny, co wpływa na lepsze opanowanie wymowy, intonacji i akcentu. Dlatego tak ważne jest, aby już na pierwszym etapie rozwoju wzbudzać w dziecku chęć do nauki języka i starać się, aby była ona jak najmniej inwazyjna i jak najbardziej efektywna.</p>
+
+                            <p>Dziecko samo z siebie nie odczuwa chęci do nauki, dlatego trzeba wprowadzać ją przez dobrą zabawę.  Rozmawiamy, bawimy się, gramy, śpiewamy, czytamy książeczki w języku angielskim. Dzięki nam, Twoje dziecko będzie uczyć się języka podczas swoich ulubionych zajęć.</p>
+
+                            <p>Nasze nianie, zaopatrzone w pomoce dydaktyczne i niezbędną wiedzę gwarantują efekty już po pierwszym miesiącu pracy z dzieckiem. Chcemy, aby czas spędzony z nianią był poświęcony na opiekę nad dzieckiem połączoną z edukacją językową przekazaną w jak najbardziej przyswajalny  dla dziecka sposób.</p>
+
+                            <p>Na ofertę  „Happy Nanny z językiem angielskim” oprócz opieki nad dzieckiem składa się wykładowy język angielski, którym nianie posługują się przez cały czas trwania zlecenia w Państwa domach.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="price" id="section8">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-7 column-center">
+                            <img src="images/price_left.png" class="price__header price__header--left">
+                            <img src="images/price_right.png" class="price__header price__header--right">
+
+                            <h1>Cennik</h1>
                             <ul>
-                                <li>nianie na pełen etat</li>
-                                <li>nianie na wieczory</li>
-                                <li>nianie na weekendy</li>
-                                <li>nianie na kilka godzin</li>
-                                <li>nianie animatorki na urodziny i przyjęcia (także wesela)</li>
-                                <li>nianie w nagłych wypadkach</li>
-                                <li>nianie na prezent</li>
+                                <li class="price__item">
+                                    <span>Angielski (min. 2 h)</span>
+                                    <span>45 zł</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Wydarzenia (min. 2 h)</span>
+                                    <span>35 zł (max 3 dzieci)</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Weekend (min. 3 h)</span>
+                                    <span>28 zł</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Wieczór (min. 3 h)</span>
+                                    <span>25 zł (po 19-stej)</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Urodziny i animacje (min. 3 h)</span>
+                                    <span>60 zł</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Całodniowo</span>
+                                    <span>indywidualnie</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Niania na prezent</span>
+                                    <span>indywidualnie</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Niania dla firm</span>
+                                    <span>indywidualnie</span>
+                                </li>
+                                <li class="price__item">
+                                    <span></span>
+                                    <span><small>cena za godzinę</small></span>
+                                </li>
                             </ul>
-                            <br /><strong>Każda oferowana forma opieki dostępna jest także w języku angielskim.</strong>
+
+                            <small>UWAGA - w zależności od lokalizacji, jeśli po godzinie 23-ciej nie istnieje możliwość przemieszczania się za pomocą środków komunikacji miejskiej, po uprzednim poinformowaniu klienta, zastrzegamy sobie możliwość doliczenia do ceny opieki koszt taksówki dla niani.</small>
                         </div>
                     </div>
                 </div>
-                <!-- for bussines -->
-                <div id="for-bussines" class="row modal">
-                    <div class="modal__content">
-                        <span class="modal__close">×</span>
-                        <div class="column-6 for__bussines__header">
-                            <h1>Biznes</h1>
+            </section>
+
+            <section class="carrier" id="section9">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-9 column-center">
+                            <h1>Praca</h1>
+                            <p>Jeśli lubisz pracować z dziećmi, jesteś troskliwa oraz kreatywna, masz doświadczenie i chcesz dołączyć do zespołu Happy Nanny, wypełnij poniższy formularz.</p>
+                            <button>formularz</button>
+                            <img src="images/carrier_footer.png">
                         </div>
-                        <div class="column-6 for__bussines__img">
-                            <img src="images/offer_for_bussines_background_1.png" />
-                        </div>
-                        <div class="column-9 for__bussines__content">
-                            <p>Współpracujemy z firmami, oferując opiekę nad dziećmi podczas imprez i wyjazdów firmowych, a także oferujemy opcję bonów opieki dla pracowników.</p>
+                    </div>
+                </div>
+                <div class="carrier__footer"></div>
+            </section>
+
+            <section class="contact" id="section10">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="column-9 column-center">
+                            <h1>Kontakt</h1>
+
+                            <strong>(poniedziałek-piątek 8:00-19:00)</strong><br />
+                            Na smsy, e-maile i formularze odpowiadamy<br />
+                            także wieczorami i <strong>w trakcie weekendu</strong>.<br/>
                             <ul>
-                                <li>nianie na spotkania biznesowe</li>
-                                <li>nianie animatorki na imprezy firmowe</li>
-                                <li>bony opieki nad dzieckiem jako benefit dla pracowników</li>
+                                <li>Telefon:</li>
+                                <li>Email:</li>
                             </ul>
-                            <br /><strong>Każda oferowana forma opieki dostępna jest także w języku angielskim.</strong>
                         </div>
-                        <div class="column-12 for__bussines__img for__bussines__img--footer">
-                            <img src="images/offer_for_bussines_background_2.png" />
-                        </div>
-                    </div>
-                </div>
-                <img src="images/offer_background_footer.png" class="offer__footer">
-            </div>
-        </section>
-
-        <section id="english-nanny">
-            <div class="wrapper">
-                <img src="images/english_nanny_background.png">
-                <div class="row">
-                    <div class="column-7 column-center">
-                        <h1>Niania z angielskim</h1>
-
-                        <p>Aby nauka języka obcego przynosiła pożądane efekty należy zacząć ją najlepiej już od 1 roku życia. Pozwala to „osłuchać się” z obcym językiem, co wpływa na rozwój kompetencji komunikacyjnych. Dzieci posiadają naturalną zdolność do nauki języków obcych, ich aparat mowy jest bardzo elastyczny i chłonny, co wpływa na lepsze opanowanie wymowy, intonacji i akcentu. Dlatego tak ważne jest, aby już na pierwszym etapie rozwoju wzbudzać w dziecku chęć do nauki języka i starać się, aby była ona jak najmniej inwazyjna i jak najbardziej efektywna.</p>
-
-                        <p>Dziecko samo z siebie nie odczuwa chęci do nauki, dlatego trzeba wprowadzać ją przez dobrą zabawę.  Rozmawiamy, bawimy się, gramy, śpiewamy, czytamy książeczki w języku angielskim. Dzięki nam, Twoje dziecko będzie uczyć się języka podczas swoich ulubionych zajęć.</p>
-
-                        <p>Nasze nianie, zaopatrzone w pomoce dydaktyczne i niezbędną wiedzę gwarantują efekty już po pierwszym miesiącu pracy z dzieckiem. Chcemy, aby czas spędzony z nianią był poświęcony na opiekę nad dzieckiem połączoną z edukacją językową przekazaną w jak najbardziej przyswajalny  dla dziecka sposób.</p>
-
-                        <p>Na ofertę  „Happy Nanny z językiem angielskim” oprócz opieki nad dzieckiem składa się wykładowy język angielski, którym nianie posługują się przez cały czas trwania zlecenia w Państwa domach.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="price">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-7 column-center">
-                        <img src="images/price_left.png" class="price__header price__header--left">
-                        <img src="images/price_right.png" class="price__header price__header--right">
-
-                        <h1>Cennik</h1>
-                        <ul>
-                            <li class="price__item">
-                                <span>Angielski (min. 2 h)</span>
-                                <span>45 zł</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Wydarzenia (min. 2 h)</span>
-                                <span>35 zł (max 3 dzieci)</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Weekend (min. 3 h)</span>
-                                <span>28 zł</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Wieczór (min. 3 h)</span>
-                                <span>25 zł (po 19-stej)</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Urodziny i animacje (min. 3 h)</span>
-                                <span>60 zł</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Całodniowo</span>
-                                <span>indywidualnie</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Niania na prezent</span>
-                                <span>indywidualnie</span>
-                            </li>
-                            <li class="price__item">
-                                <span>Niania dla firm</span>
-                                <span>indywidualnie</span>
-                            </li>
-                            <li class="price__item">
-                                <span></span>
-                                <span><small>cena za godzinę</small></span>
-                            </li>
-                        </ul>
-
-                        <small>UWAGA - w zależności od lokalizacji, jeśli po godzinie 23-ciej nie istnieje możliwość przemieszczania się za pomocą środków komunikacji miejskiej, po uprzednim poinformowaniu klienta, zastrzegamy sobie możliwość doliczenia do ceny opieki koszt taksówki dla niani.</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="carrier">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-9 column-center">
-                        <h1>Praca</h1>
-                        <p>Jeśli lubisz pracować z dziećmi, jesteś troskliwa oraz kreatywna, masz doświadczenie i chcesz dołączyć do zespołu Happy Nanny, wypełnij poniższy formularz.</p>
-                        <button>formularz</button>
-                        <img src="images/carrier_footer.png">
-                    </div>
-                </div>
-            </div>
-            <div class="carrier__footer"></div>
-        </section>
-
-        <section id="contact">
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column-9 column-center">
-                        <h1>Kontakt</h1>
-
-                        <strong>(poniedziałek-piątek 8:00-19:00)</strong><br />
-                        Na smsy, e-maile i formularze odpowiadamy<br />
-                        także wieczorami i <strong>w trakcie weekendu</strong>.<br/>
-                        <ul>
-                            <li>Telefon:</li>
-                            <li>Email:</li>
-                        </ul>
                         <img src="images/contact_footer.png">
                     </div>
                 </div>
+                <div class="contact__footer"></div>
+            </section>
+        </div>
+
+        <!-- Modal: for parents -->
+        <div id="for-parents" class="row modal">
+            <div class="modal__content">
+                <span class="modal__close">×</span>
+                <div class="column-5 for__parents__header">
+                    <h1>Rodzice</h1>
+                </div>
+                <img src="images/offer_for_parents_background.png" class="for__parents__img" />
+                <div class="column-9">
+                    <p>W Happy Nanny zapewniamy opiekę na najwyższym poziomie, dostosowaną do potrzeb dziecka i rodziców. Nasze kompetentne, troskliwe i kreatywne nianie zapewnią bezpieczeństwo, szczególną uwagę i ciekawe zajęcia dla Państwa dziecka.<br />
+                    W naszej ofercie znajdą Państwo:</p>
+                    <ul>
+                        <li>nianie na pełen etat</li>
+                        <li>nianie na wieczory</li>
+                        <li>nianie na weekendy</li>
+                        <li>nianie na kilka godzin</li>
+                        <li>nianie animatorki na urodziny i przyjęcia (także wesela)</li>
+                        <li>nianie w nagłych wypadkach</li>
+                        <li>nianie na prezent</li>
+                    </ul>
+                    <br /><strong>Każda oferowana forma opieki dostępna jest także w języku angielskim.</strong>
+                </div>
             </div>
-            <div class="contact__footer"></div>
-        </section>
+        </div>
+
+        <!-- Modal: for bussines -->
+        <div id="for-bussines" class="row modal">
+            <div class="modal__content">
+                <span class="modal__close">×</span>
+                <div class="column-6 for__bussines__header">
+                    <h1>Biznes</h1>
+                </div>
+                <div class="column-6 for__bussines__img">
+                    <img src="images/offer_for_bussines_background_1.png" />
+                </div>
+                <div class="column-9 for__bussines__content">
+                    <p>Współpracujemy z firmami, oferując opiekę nad dziećmi podczas imprez i wyjazdów firmowych, a także oferujemy opcję bonów opieki dla pracowników.</p>
+                    <ul>
+                        <li>nianie na spotkania biznesowe</li>
+                        <li>nianie animatorki na imprezy firmowe</li>
+                        <li>bony opieki nad dzieckiem jako benefit dla pracowników</li>
+                    </ul>
+                    <br /><strong>Każda oferowana forma opieki dostępna jest także w języku angielskim.</strong>
+                </div>
+                <div class="column-12 for__bussines__img for__bussines__img--footer">
+                    <img src="images/offer_for_bussines_background_2.png" />
+                </div>
+            </div>
+        </div>
 
         <!--build:js js/main.min.js -->
         <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="../node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+        <script src="../node_modules/fullpage.js/jquery.fullPage.js"></script>
         <script src="js/navigation.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
         <!-- endbuild -->
     </body>
 </html>

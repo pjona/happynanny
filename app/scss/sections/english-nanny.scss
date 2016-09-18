@@ -1,7 +1,14 @@
 /* Mobile */
-@media #{$breakpoint-small} {
-    #english-nanny {
-        padding-bottom: 10%;
+@media #{$breakpointSmall} {
+    .english-nanny {
+        &__header {
+            height: 100px !important;
+            margin-bottom: -5px;
+        }
+
+        &__background {
+            content:url("../images/english_nanny_background_mobile.png");
+        }
 
         .wrapper {
             position: relative;
@@ -12,29 +19,36 @@
             top: 0;
             width: 100%;
 
-            div {
-                margin-top: 0;
-                padding-left: 1em;
-            }
-
             h1 {
                 text-align: right;
+                padding-right: 13px;
+            }
+
+            p {
+                padding: 0 20px;
             }
         }
+
+        @include disableVerticalAlign()
     }
 }
 
 /* Desktop */
-@media #{$breakpoint-medium} {
-    #english-nanny {
+@media #{$breakpointMedium} {
+    .english-nanny {
+        &__background {
+            content:url("../images/english_nanny_background.png");
+        }
+
         .row {
             div {
-                margin-top: -92px;
                 padding-left: 67px;
+                padding-top: 71px;
             }
 
             h1 {
                 text-align: center;
+                padding-right: 0;
             }
         }
     }

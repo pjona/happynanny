@@ -1,21 +1,33 @@
-#partners {
-    padding-bottom: 10%;
-    margin-top: 10px;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .partners {
+        padding-bottom: 10%;
+        margin-top: 10px;
 
-    h1 {
-        text-align: left;
-    }
-
-    .partner__item {
-        img {
-            display: block;
-            margin-bottom: 20px;
-            margin-top: 60px;
+        h1 {
+            text-align: center;
         }
 
-        span {
-            width: 150px;
-            display: block;
+        &__item {
+            img {
+                display: block;
+                margin-bottom: 20px;
+                margin-top: 60px;
+            }
+
+            span {
+                width: 150px;
+                display: block;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpointMedium} {
+    .partners {
+        h1 {
+            text-align: left;
         }
     }
 }

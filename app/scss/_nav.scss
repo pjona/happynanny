@@ -1,12 +1,16 @@
 /* Mobile */
 $mobileMenuWidth: 15;
 $hamburgerSpanTop: 0.875;
-@media #{$breakpoint-small} {
+@media #{$breakpointSmall} {
     section {
         position: relative;
     }
 
     .header {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+
         &__menu {
             @include rem(left, $mobileMenuWidth * -1);
             position: fixed;
@@ -134,11 +138,15 @@ $hamburgerSpanTop: 0.875;
 
             }
         }
+
+        .active, .highlighted {
+            font-weight: bold;
+        }
     }
 }
 
 /* Desktop */
-@media #{$breakpoint-medium} {
+@media #{$breakpointMedium} {
     .header {
         &__hamburger {
             display: none;
@@ -147,18 +155,13 @@ $hamburgerSpanTop: 0.875;
         &__menu {
             position: fixed;
             width: 100%;
-            height: 50px;
+            height: 39px;
             text-align: center;
             background: #fff;
             top: 0;
             left: 0 !important;
-            padding-top: 54px;
+            padding: 15px 0;
             z-index: 10;
-
-            &--sticky {
-                position: fixed;
-                padding: 15px 0;
-            }
 
             &__item {
                 z-index: 10;
@@ -166,10 +169,6 @@ $hamburgerSpanTop: 0.875;
                 vertical-align: top;
                 margin-right: 1px;
                 position: relative;
-
-                &--highlighted {
-                    font-weight: bold;
-                }
 
                 a, span {
                     color: $black;

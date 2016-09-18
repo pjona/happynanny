@@ -1,8 +1,7 @@
 /* Mobile */
-@media #{$breakpoint-small} {
+@media #{$breakpointSmall} {
     .first {
         text-align: center;
-        margin-top: 40px;
 
         &__header {
             margin-top: 60px;
@@ -10,29 +9,20 @@
 
         &__content {
             margin-top: -24px;
+            background-color: $yellow;
+            height: 100%;
 
             h1 {
-                height: 300px;
                 @include rem(line-height, 2.750);
-                background-color: $yellow;
                 padding-top: 62px;
                 text-transform: none;
             }
         }
 
-        &__footer {
-            margin-top: -230px;
+        .fp-scroller {
+            height: 100%;
         }
-    }
-}
 
-/* Desktop */
-@media #{$breakpoint-medium} {
-    .first {
-        &__content {
-            h1 {
-                height: 500px;
-            }
-        }
+        @include disableVerticalAlign()
     }
 }

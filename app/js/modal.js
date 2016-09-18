@@ -14,7 +14,7 @@
             this.$displayed = false;
         },
         bindEvents: function() {
-             // show modal
+            // show modal
             this.$click.click(this.showModal.bind(this));
             // close modal by cross
             this.$close.click(this.closeModal.bind(this));

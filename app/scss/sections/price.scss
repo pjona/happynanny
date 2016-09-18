@@ -1,42 +1,61 @@
-#price {
-    background: $blue-darker url('../images/price_header.png') repeat-x top center;
-    padding-top: 100px;
-    margin-top: 200px;
-    padding-bottom: 150px;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .price {
+        background: $blueDarker url('../images/price_header.png') repeat-x top center;
+        margin-top: 46px;
 
-    .row {
-        position: relative;
+        .row {
+            position: relative;
 
-        small {
-            @include rem(font-size, 1);
+            small {
+                @include rem(font-size, 1);
+            }
+        }
+
+        &__item {
+            @include rem(font-size, 1.425);
+            @include rem(line-height, 1.875);
+
+            span:first-child {
+                float: left;
+            }
+
+            span:last-child {
+                text-align: right;
+                display: block;
+            }
+        }
+
+        &__header {
+            position: absolute;
+
+            &--left {
+                left: -150px;
+                top: -100px;
+            }
+
+            &--right {
+                display: none;
+            }
         }
     }
+}
 
-    .price__item {
-        @include rem(font-size, 1.425);
-        @include rem(line-height, 1.875);
-
-        span:first-child {
-            float: left;
+/* Desktop */
+@media #{$breakpointMedium} {
+    .price {
+        &__header {
+            &--right {
+                right: 10px;
+                top: -66px;
+                display: block;
+            }
         }
 
-        span:last-child {
-            text-align: right;
-            display: block;
-        }
-    }
-
-    .price__header {
-        position: absolute;
-
-        &--left {
-            left: -150px;
-            top: -100px;
-        }
-
-        &--right {
-            right: 10px;
-            top: -66px;
+        .row {
+            small {
+                @include rem(line-height, 1.1);
+            }
         }
     }
 }

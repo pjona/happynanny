@@ -26,22 +26,22 @@ img {
     min-height: 1px; 
 }   
  
-@media #{$breakpoint-medium} {
+@media #{$breakpointMedium} {
     .wrapper {
         width: 95%;
-        max-width: $grid-max-width;
+        max-width: $gridMaxWidth;
     }
-    @for $i from 1 through $grid-columns {
+    @for $i from 1 through $gridColumns {
         .column-#{$i} {
-            width: 100% / $grid-columns * $i;
+            width: 100% / $gridColumns * $i;
         }
     }
 }
 
-@media #{$breakpoint-small} {
-    @for $i from 1 through $grid-columns {
+@media #{$breakpointSmall} {
+    @for $i from 1 through $gridColumns {
         .column-#{$i}-mobile {
-            width: 100% / $grid-columns * $i;
+            width: 100% / $gridColumns * $i;
         }
     }
 }
@@ -61,4 +61,10 @@ img {
 .column-center {
 	margin: 0 auto;
 	float: none !important;
+}
+
+@mixin disableVerticalAlign() {
+    .fp-tableCell {
+        vertical-align: top;
+    }
 }

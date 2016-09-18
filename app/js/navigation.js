@@ -15,7 +15,6 @@ var nav = (function() {
     var cacheDom = function() {
         self.$window = $(window);
         self.$menu = $('.header__menu');
-        self.$menuItems = $('.header__menu__item a');
         self.$menuItemHasSubmenu = $('.header__menu__item--has-submenu');
         self.$menuSubmenu = $('.header__menu__submenu');
         self.$hamburger = $('.header__hamburger');
@@ -25,29 +24,34 @@ var nav = (function() {
         self.$sections = $('section').not('section section');
     };
 
+
     var load = function() {
-        self.$menuItems.mPageScroll2id({
-            highlightClass: 'header__menu__item--highlighted',
-            offset: 50,
-            forceSingleHighlight: true
+        $('#fullpage').fullpage({
+            sectionSelector: 'section',
+            anchors: [
+                'first', 'why', 'mission',
+                'team', 'security', 'partners',
+                'offer', 'english-nanny', 'price',
+                'carrier', 'contact'
+            ],
+            responsiveHeight: 600,
+            responsiveWidth: 800,
+            bigSectionsDestination: 'top',
+            menu: '.header__menu',
+            onLeave: boldSubMenu
         });
 
-        self.$hash = window.location.hash;
-        if (self.$hash) {
-            self.$menuItems.mPageScroll2id('scrollTo', self.$hash);
-        }
+        responsive();
     };
 
     var bindEvents = function() {
-        // change menu style when scrolling
-        self.$window.bind('scroll', scrollMenu);
-        // change URL when strolling
-        self.$window.bind('scroll', scrollUrl);
-        // show/close menu when clicking hamburger on mobile
+        // Show/close menu when clicking hamburger on mobile
         self.$hamburger.bind('click', clickHambuger);
-        // click/hover on menu with submenu
+        // Click/hover on menu with submenu
         self.$menuItemHasSubmenu.bind('click mouseenter', showSubmenu);
         self.$menuItemHasSubmenu.bind('mouseleave', hideSubmenu);
+        // Disable auto scrolling on mobile
+        self.$window.bind('resize', responsive);
     };
 
     // Submenu
@@ -63,6 +67,18 @@ var nav = (function() {
     var hideSubmenu = function(event) {
         self.$menuSubmenu.removeClass('header__menu__submenu--show');
         self.$menuItemHasSubmenu.removeClass('header__menu__item--has-open-submenu');
+    };
+
+    // Bold submenu with active item
+    var boldSubMenu = function(index, nextIndex, direction) {
+        var menuAnchor = $('#section' + (nextIndex-1)).attr('class').split(' ')[0];
+        var activeItemInSubmenu = $('li[data-menuanchor="' + menuAnchor + '"]').parents('.header__menu__submenu');
+
+        self.$menuSubmenu.prev('span').removeClass('highlighted');
+
+        if(activeItemInSubmenu.length !== 0) {
+            activeItemInSubmenu.prev('span').addClass('highlighted');
+        }
     };
 
     // Hamburger
@@ -101,27 +117,14 @@ var nav = (function() {
         $('.header__menu--open .header__menu__item a').unbind('click');
     };
 
-    // Scrolls
-    var scrollMenu = function(event) {
-        var origOffsetY = document.querySelector('.header__menu__item').offsetTop;
-
-        if (self.$window.scrollTop() > origOffsetY) {
-            self.$menu.addClass('header__menu--sticky');
-        } else {
-            self.$menu.removeClass('header__menu--sticky');
-        }
-    };
-
-    var scrollUrl = function(event) {
-        var hash = self.$menuItems.closest('.header__menu__item--highlighted').attr('href');
-        if (typeof hash === 'undefined') {
-            hash = '#';
+    // Responsive
+    var responsive = function() {
+        var autoScrolling = true;
+        if (self.$window.width() < 800 && self.$window.height() < 600) {
+            autoScrolling = false;
         }
 
-        if (self.$hash !== hash) {
-            self.$hash = hash;
-            window.history.pushState('', '', hash);                
-        }
+        $.fn.fullpage.setAutoScrolling(autoScrolling);
     };
 
     return {

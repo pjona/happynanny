@@ -1,7 +1,12 @@
-#team {
-    margin: 70px 0;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .team {
+        width: 50%;
+        margin: 0 auto;
 
-    .row {
-        padding: 10% 0;
+        p {
+            margin-bottom: 10px;
+            @include rem(line-height, 1.2)
+        }
     }
 }

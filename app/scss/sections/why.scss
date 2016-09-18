@@ -1,10 +1,61 @@
-#why {
-    margin-top: -300px;
-    padding-top: 267px;
-    margin-bottom: 100px;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .why {
+        background: #fff;
+        @include disableVerticalAlign()
 
-    h1 {
-        text-align: left;
-        margin-bottom: 30px;
+        &__content {
+            h1 {
+                @include rem(font-size, 1.2);
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 7px;
+                @include rem(font-size, 0.8);
+                @include rem(line-height, 1.150);
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpointMedium} {
+    .why {
+        &__header {
+            margin-top: 0px;
+        }
+
+        &__content {
+            @include desktopParagraph()
+
+            h1, p {
+                text-align: left;
+            }
+
+            h1 {
+                margin-top: -30px;
+            }
+        }
+    }
+}
+
+/* More than image header width */
+$whyHeaderWidth: 1094px;
+@media only screen and (min-width: $whyHeaderWidth) {
+    .why {
+        text-align: center;
+        position: relative;
+
+        &__background {
+            width: 100%;
+            height: 250px;
+            background-color: $yellow;
+        }
+
+        &__header {
+            margin-top: -209px;
+        }
     }
 }

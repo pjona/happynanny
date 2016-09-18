@@ -6,19 +6,20 @@ $fontBold:    'AleoBold', 'Roboto Slab';
 // colors
 $black:        #231f20;
 $blue:         #2e3192;
-$blue-darker:  #b0c6ea;
-$blue-darkest: #2c3792;
+$blueLigher:   #cbe2f6;
+$blueDarker:   #b0c6ea;
+$blueDarkest:  #2c3792;
 $yellow:       #fff53a;
 $green:        #6bc62e;
-$green-darker: #40bb6a;
+$greenDarker:  #40bb6a;
 
 // grid variables
-$grid-columns: 12;
-$grid-max-width: 65em;
+$gridColumns: 12;
+$gridMaxWidth: 65em;
  
 // breakpoints
-$breakpoint-small:  "only screen and (min-width: 0em)";
-$breakpoint-medium: "only screen and (min-width: 30em)";
+$breakpointSmall:  "only screen and (min-width: 0em)";
+$breakpointMedium: "only screen and (min-width: 30em)";
 
 body {
 	font-family: $fontRegular;

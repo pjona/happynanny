@@ -1,8 +1,30 @@
-#mission {
-    background: #cbe2f6 url('../images/mission_header.png') repeat-x top center;
-    padding-bottom: 10%;
+$missionMarginTop: 93px;
 
-    .row {
-        padding-top: 150px;
+/* Mobile */
+@media #{$breakpointSmall} {
+    .mission {
+        margin-top: -10px;
+        background: $blueLigher url('../images/mission_header.png') repeat-x top center;
+
+        &__img {
+            margin-top: $missionMarginTop;
+        }
+
+        &__content {
+            h1 {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpointMedium} {
+    .mission {
+        margin-top: 39px;
+
+        &__content {
+            margin-top: $missionMarginTop;
+        }
     }
 }
