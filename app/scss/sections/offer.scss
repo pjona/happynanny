@@ -55,24 +55,20 @@
     }
 
     #for-parents {
-        .modal__content {
-            position: relative;
-
-            > div {
-                float: none;
-            }
-        }
-
         .for__parents {
-            &__header h1 {
-                margin-top: 162px;
-                text-align: left;
+            &__content {
+                float: none;
+
+                h1 {
+                    margin-top: 70px;
+                    text-align: left;
+                }
             }
 
             &__img {
-                position: absolute;
-                right: 0;
-                top: 51px;
+                float: right;
+                margin-top: -349px;
+                margin-right: -36px;
             }
         }
     }
@@ -112,7 +108,7 @@
 @media #{$breakpointMedium} {
     .offer {
         &__background__header {
-            height: 130px;
+            height: 250px;
         }
     }
 }

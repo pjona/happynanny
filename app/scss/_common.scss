@@ -10,6 +10,13 @@ h1 {
     opacity: 0.4;
 }
 
+.list {
+    list-style: inherit;
+    margin-left: 23px;
+    @include rem(font-size, 1);
+    @include rem(line-height, 1.3);
+}
+
 @media #{$breakpointSmall} {
     h1 {
         @include rem(font-size, 1.5);

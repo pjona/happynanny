@@ -4,7 +4,7 @@
         padding-top: 230px;
         background: #fff;
 
-        h1 {
+        &__header {
             text-align: left;
         }
 
@@ -21,11 +21,23 @@
     }
 }
 
-
-
 /* Desktop */
 @media #{$breakpointMedium} {
     .contact {
+        &__header {
+            margin-top: 50px;
+        }
+
+        &__hours {
+            font-weight: bold;
+        }
+
+        &__details {
+            @include rem(font-size, 1.425);
+            @include rem(line-height, 1.875);
+            margin-bottom: 40px;
+        }
+
         &__footer {
             max-height: 100%;
             margin-top: -115px;

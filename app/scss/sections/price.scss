@@ -16,6 +16,16 @@
             @include rem(font-size, 1.425);
             @include rem(line-height, 1.875);
 
+            &--small {
+                @include rem(font-size, 1);
+                @include rem(line-height, 1);
+                margin-top: 8px;
+            }
+
+            &:last-child {
+                margin-bottom: 12px;
+            }
+
             span:first-child {
                 float: left;
             }

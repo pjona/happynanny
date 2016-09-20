@@ -171,6 +171,14 @@ h1 {
 .opacity {
   opacity: 0.4; }
 
+.list {
+  list-style: inherit;
+  margin-left: 23px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20.8px;
+  line-height: 1.3rem; }
+
 @media only screen and (min-width: 0em) {
   h1 {
     font-size: 24px;
@@ -390,13 +398,10 @@ h1 {
       font-size: 19.2px;
       font-size: 1.2rem;
       margin-top: -10px;
-      margin-bottom: 10px; }
-    .why__content p {
-      margin-bottom: 7px;
-      font-size: 12.8px;
-      font-size: 0.8rem;
-      line-height: 18.4px;
-      line-height: 1.15rem; } }
+      margin-bottom: 20px; }
+    .why__content ul {
+      line-height: 23.2px;
+      line-height: 1.45rem; } }
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
@@ -408,8 +413,6 @@ h1 {
     font-size: 1rem;
     line-height: 20.8px;
     line-height: 1.3rem; }
-  .why__content h1, .why__content p {
-    text-align: left; }
   .why__content h1 {
     margin-top: -30px; } }
 
@@ -422,6 +425,8 @@ h1 {
       width: 100%;
       height: 250px;
       background-color: #fff53a; }
+    .why__content h1, .why__content ul {
+      text-align: left; }
     .why__header {
       margin-top: -209px; } }
 
@@ -529,17 +534,15 @@ h1 {
       .offer .row.content div h1, .offer .row.content div h2 {
         margin-bottom: 64px;
         margin-bottom: 4rem; }
-  #for-parents .modal__content {
-    position: relative; }
-    #for-parents .modal__content > div {
-      float: none; }
-  #for-parents .for__parents__header h1 {
-    margin-top: 162px;
-    text-align: left; }
+  #for-parents .for__parents__content {
+    float: none; }
+    #for-parents .for__parents__content h1 {
+      margin-top: 70px;
+      text-align: left; }
   #for-parents .for__parents__img {
-    position: absolute;
-    right: 0;
-    top: 51px; }
+    float: right;
+    margin-top: -349px;
+    margin-right: -36px; }
   #for-bussines .for__bussines__header {
     float: left; }
     #for-bussines .for__bussines__header h1 {
@@ -558,7 +561,7 @@ h1 {
 /* Desktop */
 @media only screen and (min-width: 30em) {
   .offer__background__header {
-    height: 130px; } }
+    height: 250px; } }
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
@@ -607,6 +610,14 @@ h1 {
       font-size: 1.425rem;
       line-height: 30px;
       line-height: 1.875rem; }
+      .price__item--small {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 16px;
+        line-height: 1rem;
+        margin-top: 8px; }
+      .price__item:last-child {
+        margin-bottom: 12px; }
       .price__item span:first-child {
         float: left; }
       .price__item span:last-child {
@@ -661,7 +672,7 @@ h1 {
   .contact {
     padding-top: 230px;
     background: #fff; }
-    .contact h1 {
+    .contact__header {
       text-align: left; }
     .contact__footer {
       height: 100%;
@@ -674,6 +685,16 @@ h1 {
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
+  .contact__header {
+    margin-top: 50px; }
+  .contact__hours {
+    font-weight: bold; }
+  .contact__details {
+    font-size: 22.8px;
+    font-size: 1.425rem;
+    line-height: 30px;
+    line-height: 1.875rem;
+    margin-bottom: 40px; }
   .contact__footer {
     max-height: 100%;
     margin-top: -115px; } }
