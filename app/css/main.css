@@ -179,6 +179,14 @@ h1 {
   line-height: 20.8px;
   line-height: 1.3rem; }
 
+button {
+  border-radius: 17px;
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  padding: 4px 28px;
+  color: #fff;
+  margin-top: 20px; }
+
 @media only screen and (min-width: 0em) {
   h1 {
     font-size: 24px;
@@ -527,11 +535,10 @@ h1 {
       vertical-align: middle;
       display: table-cell;
       text-align: center; }
-      .offer .row.content div h2 {
-        font-size: 30.4px;
-        font-size: 1.9rem;
-        font-family: "AleoBold", "Roboto Slab"; }
-      .offer .row.content div h1, .offer .row.content div h2 {
+      .offer .row.content div button {
+        background-color: #cbe2f6;
+        color: #000; }
+      .offer .row.content div h1 {
         margin-bottom: 64px;
         margin-bottom: 4rem; }
   #for-parents .for__parents__content {
@@ -556,7 +563,47 @@ h1 {
     #for-bussines .for__bussines__img img {
       margin-right: -20px; }
   #for-bussines .for__bussines__content {
-    float: none; } }
+    float: none; }
+  #order .modal__content {
+    height: 540px; }
+  #order .order__header {
+    padding: 0px 16px;
+    padding: 0rem 1rem; }
+    #order .order__header h1 {
+      margin-top: 0;
+      text-align: left; }
+  #order .order__row {
+    padding-bottom: 0.3rem; }
+    #order .order__row label, #order .order__row input, #order .order__row textarea {
+      border-radius: 18px;
+      display: inline-block;
+      width: 100%; }
+    #order .order__row.column-2 {
+      clear: both; }
+    #order .order__row.column-12 {
+      text-align: right;
+      padding: 0px 16px;
+      padding: 0rem 1rem; }
+      #order .order__row.column-12 input {
+        background-color: #fff200;
+        font-family: "AleoRegular", "Roboto Slab";
+        font-size: 16px;
+        width: 100px;
+        border-width: 0; }
+    #order .order__row img {
+      padding-top: 10px; }
+    #order .order__row label {
+      background-color: #fff200;
+      text-align: center;
+      padding: 7px 0; }
+    #order .order__row input, #order .order__row textarea {
+      outline: none;
+      border-color: #000;
+      border-width: 1px;
+      padding: 6px 10px; }
+    #order .order__row textarea {
+      height: 110px;
+      resize: none; } }
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
@@ -603,18 +650,18 @@ h1 {
     .price .row {
       position: relative; }
       .price .row small {
-        font-size: 16px;
-        font-size: 1rem; }
+        font-size: 12.8px;
+        font-size: 0.8rem; }
     .price__item {
       font-size: 22.8px;
       font-size: 1.425rem;
       line-height: 30px;
       line-height: 1.875rem; }
       .price__item--small {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 16px;
-        line-height: 1rem;
+        font-size: 12.8px;
+        font-size: 0.8rem;
+        line-height: 12.8px;
+        line-height: 0.8rem;
         margin-top: 8px; }
       .price__item:last-child {
         margin-bottom: 12px; }
@@ -637,9 +684,11 @@ h1 {
     right: 10px;
     top: -66px;
     display: block; }
+  .price .wrapper {
+    padding-top: 40px; }
   .price .row small {
-    line-height: 17.6px;
-    line-height: 1.1rem; } }
+    line-height: 12.8px;
+    line-height: 0.8rem; } }
 
 /* Mobile */
 @media only screen and (min-width: 0em) {
@@ -647,14 +696,6 @@ h1 {
     padding-top: 300px; }
     .carrier h1 {
       text-align: left; }
-    .carrier button {
-      background-color: #2c3792;
-      border-radius: 17px;
-      font-size: 30px;
-      font-size: 1.875rem;
-      padding: 4px 28px;
-      color: #fff;
-      margin-top: 20px; }
     .carrier__footer {
       height: 100%;
       background-color: #6bc62e;
