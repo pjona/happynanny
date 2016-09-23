@@ -77,9 +77,9 @@
                             <h1>Dlaczego Happy Nanny?</h1>
 
                             <ul class="list">
-                                <li>Opieka nad dzieckiem może odbywać się wyłącznie w języku angielskim.</li>
                                 <li>Opiekujemy się dziećmi, a także edukujemy i rozwijamy.</li>
                                 <li>Nasze nianie zawsze wyposażone są w materiały edukacyjne.</li>
+                                <li>Opieka nad dzieckiem może odbywać się wyłącznie w języku angielskim.</li>
                                 <li>Nasze nianie zaopiekują się dziećmi o specjalnych potrzebach edukacyjnych.</li>
                                 <li>Jesteśmy rozwiązaniem dla turystów oraz zagranicznych gości szukających opieki dla swoich dzieci.</li>
                                 <li>Docieramy do klientów na terenie Trójmiasta, Rumi, Redy, Wejherowa i okolic.</li>
@@ -110,7 +110,7 @@
                     <div class="row">
                         <div class="column-9">
                             <h1>Zespół</h1>
-                            <p><strong>Małgorzata Bach</strong> - absolwentka Uniwersytetu Gdańskiego, ukończyła studia pedagogiczne o specjalności wczesna edukacja i terapia pedagogiczna. Pracowała w anglojęzycznym przedszkolu oraz opiekowała się dziećmi autystycznymi. Od wielu lat udziela korepetycji oraz pracuje jako niania. Aktualnie terapeutka w jednym z trójmiejskich placówek zajmujących.</p>
+                            <p><strong>Małgorzata Bach</strong> - absolwentka Uniwersytetu Gdańskiego, ukończyła studia pedagogiczne o specjalności wczesna edukacja i terapia pedagogiczna. Pracowała w anglojęzycznym przedszkolu oraz opiekowała się dziećmi autystycznymi. Od wielu lat udziela korepetycji oraz pracuje jako niania. Aktualnie terapeutka w jednym z trójmiejskich placówek.</p>
                             <p><strong>Dobrawa Aleksiak</strong> – absolwentka Uniwersytetu Gdańskiego i Uniwersytetu Adama Mickiewicza. Zainteresowana edukacją globalną i nieformalną oraz naturalną metodą nauki języków obcych. Swoje doświadczenie w pracy z dziećmi zdobywała w anglojęzycznym przedszkolu, na studiach i stażu w Portugalii, na wolontariacie w świetlicy w Kolumbii oraz podczas prowadzenia autorskich warsztatów na temat edukacji globalnej w przedszkolach, świetlicach i szkołach.</p>
                             <p><strong>Małgorzata Aleksiak</strong> – wieloletni dyrektor gdyńskiego przedszkola, nauczyciel dyplomowany, absolwentka Uniwersytetu Gdańskiego, pedagogiki wczesnoszkolnej i wychowania przedszkolnego oraz studiów podyplomowych: terapia pedagogiczna, zarządzanie oświatą, edukator wychowania przedszkolnego. W Happy Nanny zapewnia wsparcie merytoryczne i metodyczne.</p>
                         </div>
@@ -192,8 +192,9 @@
                         <div class="column-3 column-center">
                             <h1>Oferta</h1>
 
-                            <h2 class="modal__click" data-modal="for-parents">Dla rodziców</h2>
-                            <h2 class="modal__click" data-modal="for-bussines">Dla biznesu</h2>
+                            <button class="modal__click" data-modal="for-parents">Dla rodziców</button>
+                            <button class="modal__click" data-modal="for-bussines">Dla biznesu</button>
+                            <button class="modal__click" data-modal="order">Zamawiam</button>
                         </div>
                     </div>
                     <div class="offer__footer">
@@ -228,24 +229,24 @@
                             <h1>Cennik</h1>
                             <ul>
                                 <li class="price__item">
-                                    <span>Niania z angielskim</span>
-                                    <span>45 zł</span>
-                                </li>
-                                <li class="price__item">
                                     <span>W ciągu dnia</span>
                                     <span>20 zł</span>
-                                </li>
-                                <li class="price__item">
-                                    <span>Weekend</span>
-                                    <span>28 zł</span>
                                 </li>
                                 <li class="price__item">
                                     <span>Wieczór</span>
                                     <span>25 zł</span>
                                 </li>
                                 <li class="price__item">
+                                    <span>Weekend</span>
+                                    <span>28 zł</span>
+                                </li>
+                                <li class="price__item">
                                     <span>Wydarzenia</span>
                                     <span>35 zł</span>
+                                </li>
+                                <li class="price__item">
+                                    <span>Niania z angielskim</span>
+                                    <span>45 zł</span>
                                 </li>
                                 <li class="price__item">
                                     <span>Urodziny i animacje</span>
@@ -288,8 +289,7 @@
                     <div class="row">
                         <div class="column-9 column-center">
                             <h1>Praca</h1>
-                            <p>Jeśli lubisz pracować z dziećmi, jesteś troskliwa oraz kreatywna, masz doświadczenie i chcesz dołączyć do zespołu Happy Nanny, wypełnij poniższy formularz.</p>
-                            <button>formularz</button>
+                            <p>Jeśli lubisz pracować z dziećmi, jesteś troskliwa oraz kreatywna, masz doświadczenie i chcesz dołączyć do zespołu Happy Nanny, wyślij CV na <a href="mailto:kontakt@happynanny.pl">kontakt@happynanny.pl</a>.</p>
                             <img src="images/carrier_footer.png">
                         </div>
                     </div>
@@ -365,6 +365,71 @@
                 <div class="column-12 for__bussines__img for__bussines__img--footer">
                     <img src="images/offer_for_bussines_background_2.png" />
                 </div>
+            </div>
+        </div>
+
+        <!-- Modal: order -->
+        <div id="order" class="row modal">
+            <div class="modal__content">
+                <span class="modal__close">×</span>
+                <div class="column-12 order__row order__header">
+                    <h1>Formularz</h1>
+                </div>
+
+                <form action="mail.php" method="POST">
+                    <div class="column-2 order__row">
+                        <label for="input_name">Imię i nazwisko</label>
+                    </div>
+                    <div class="column-10 order__row">
+                        <input type="text" name="name" id="input_name" required="required">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_children">Imię i wiek dziecka</label>
+                    </div>
+                    <div class="column-10 order__row">
+                        <input type="text" name="children" id="input_children" required="required">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_address">Adres</label>
+                    </div>
+                    <div class="column-10 order__row">
+                        <input type="text" name="address" id="input_address" required="required">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_email">Adres e-mailowy</label>
+                    </div>
+                    <div class="column-10 order__row">
+                        <input type="text" name="email" id="input_email">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_phone">Numer telefonu</label>
+                    </div>
+                    <div class="column-4 order__row">
+                        <input type="text" name="phone" id="input_phone" required="required">
+                    </div>
+                    <div class="column-3 order__row">
+                        <label for="input_date">Data i czas trwania usługi</label>
+                    </div>
+                    <div class="column-3 order__row">
+                        <input type="text" name="date" id="input_date">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_body">Treść zgłoszenia</label>
+                        <img src="images/order_img.png">
+                    </div>
+                    <div class="column-10 order__row">
+                        <textarea name="body" id="input_body"></textarea>
+                    </div>
+
+                    <div class="column-12 order__row">
+                        <input type="submit" value="Wyślij" />
+                    </div>
+                </form>
             </div>
         </div>
 

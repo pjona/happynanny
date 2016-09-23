@@ -41,12 +41,12 @@
                     display: table-cell;
                     text-align: center;
 
-                    h2 {
-                        @include rem(font-size, 1.9);
-                        font-family: $fontBold;
+                    button {
+                        background-color: $blueLigher;
+                        color: #000;
                     }
 
-                    h1, h2 {
+                    h1 {
                         @include rem(margin-bottom, 4);
                     }
                 }
@@ -99,6 +99,72 @@
 
             &__content {
                 float: none;
+            }
+        }
+    }
+
+    #order {
+        .modal__content {
+            height: 540px;
+        }
+
+        .order {
+            &__header {
+                @include rem(padding, 0, 1);
+
+                h1 {
+                    margin-top: 0;
+                    text-align: left;
+                }
+            }
+
+            &__row {
+            padding-bottom: 0.3rem;
+                label, input, textarea {
+                    border-radius: 18px;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                &.column-2 {
+                    clear: both;
+                }
+
+                &.column-12  {
+                    text-align: right;
+                    @include rem(padding, 0, 1);
+
+                    input {
+                        background-color: $yellowDarker;
+                        font-family: $fontRegular;
+                        font-size: 16px;
+                        width: 100px;
+                        border-width: 0;
+                    }
+                }
+
+                img {
+                    padding-top: 10px;
+                }
+
+                label {
+                    background-color: $yellowDarker;
+                    text-align: center;
+                    padding: 7px 0;
+                }
+
+                input, textarea {
+                    outline: none;
+                    border-color: #000;
+                    border-width: 1px;
+                    padding: 6px 10px;
+                }
+
+                textarea {
+                    height: 110px;
+                    resize: none;
+                }
+
             }
         }
     }

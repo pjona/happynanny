@@ -7,15 +7,6 @@
             text-align: left;
         }
 
-        button {
-            background-color: $blueDarkest;
-            border-radius: 17px;
-            @include rem(font-size, 1.875);
-            padding: 4px 28px;
-            color: #fff;
-            margin-top: 20px;
-        }
-
         &__footer {
             height: 100%;
             background-color: $green;
