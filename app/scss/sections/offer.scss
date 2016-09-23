@@ -44,6 +44,10 @@
                     button {
                         background-color: $blueLigher;
                         color: #000;
+
+                        &:focus {
+                            outline:0;
+                        }
                     }
 
                     h1 {

@@ -538,6 +538,8 @@ button {
       .offer .row.content div button {
         background-color: #cbe2f6;
         color: #000; }
+        .offer .row.content div button:focus {
+          outline: 0; }
       .offer .row.content div h1 {
         margin-bottom: 64px;
         margin-bottom: 4rem; }
