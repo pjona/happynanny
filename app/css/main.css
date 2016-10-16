@@ -160,7 +160,7 @@ img {
   margin: 0 auto;
   float: none !important; }
 
-h1 {
+h1, h2, h3 {
   font-family: "AleoBold", "Roboto Slab";
   font-size: 32px;
   font-size: 2rem;
@@ -402,7 +402,7 @@ button {
     background: #fff; }
     .why .fp-tableCell {
       vertical-align: top; }
-    .why__content h1 {
+    .why__content h2 {
       font-size: 19.2px;
       font-size: 1.2rem;
       margin-top: -10px;
@@ -421,7 +421,7 @@ button {
     font-size: 1rem;
     line-height: 20.8px;
     line-height: 1.3rem; }
-  .why__content h1 {
+  .why__content h2 {
     margin-top: -30px; } }
 
 /* More than image header width */
@@ -433,7 +433,7 @@ button {
       width: 100%;
       height: 250px;
       background-color: #fff53a; }
-    .why__content h1, .why__content ul {
+    .why__content h2, .why__content ul {
       text-align: left; }
     .why__header {
       margin-top: -209px; } }
@@ -445,7 +445,7 @@ button {
     background: #cbe2f6 url("../images/mission_header.png") repeat-x top center; }
     .mission__img {
       margin-top: 93px; }
-    .mission__content h1 {
+    .mission__content h2 {
       margin-top: 0; } }
 
 /* Desktop */
@@ -470,7 +470,7 @@ button {
   .security {
     background: #fff53a url("../images/security_header.png") repeat-x top center;
     margin-top: 10px; }
-    .security h1 {
+    .security h2 {
       margin-top: 0; }
     .security .row > div {
       padding-bottom: 0;
@@ -493,7 +493,7 @@ button {
   .partners {
     padding-bottom: 10%;
     margin-top: 10px; }
-    .partners h1 {
+    .partners h3 {
       text-align: center; }
     .partners__item img {
       display: block;
@@ -505,7 +505,7 @@ button {
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
-  .partners h1 {
+  .partners h3 {
     text-align: left; } }
 
 /* Mobile */

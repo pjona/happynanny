@@ -77,10 +77,16 @@ gulp.task('useref', function() {
         .pipe(gulp.dest('dist'))
 });
 
+// Extras
+gulp.task('extras', function () {
+    return gulp.src(['app/robots.txt', 'app/favicon.ico'])
+        .pipe(gulp.dest('dist'));
+});
+
 // Builder
 gulp.task('build', function (callback) {
     runSequence('clean:dist', 
-        ['sass', 'useref', 'images', 'fonts'],
+        ['sass', 'useref', 'images', 'fonts', 'extras'],
         callback
     )
 });
