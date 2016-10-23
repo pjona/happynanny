@@ -23,8 +23,12 @@ $hamburgerSpanTop: 0.875;
                     padding: 2px;
                 }
 
-                &--facebook img {
-                    width: 22px;
+                &--facebook {
+                    margin-top: -5px;
+
+                    img {
+                        width: 22px;
+                    }
                 }
             }
 

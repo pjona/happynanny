@@ -50,59 +50,20 @@
                         }
                     }
 
-                    h1 {
-                        @include rem(margin-bottom, 4);
+                    ul, p {
+                        text-align: left;
+                        font-size: 14px;
+                    }
+
+                    ul {
+                        list-style: disc;
+
+                        li {
+                            margin: 0 0 9px 18px;
+                            line-height: 19px;
+                        }
                     }
                 }
-            }
-        }
-    }
-
-    #for-parents {
-        .for__parents {
-            &__content {
-                float: none;
-
-                h1 {
-                    margin-top: 70px;
-                    text-align: left;
-                }
-            }
-
-            &__img {
-                float: right;
-                margin-top: -349px;
-                margin-right: -36px;
-            }
-        }
-    }
-
-    #for-bussines {
-        .for__bussines {
-            &__header {
-                float: left;
-
-                h1 {
-                    text-align: left;
-                }
-            }
-
-            &__img {
-                float: right;
-                padding-right: 0;
-                text-align: right;
-
-                &--footer {
-                    float: none;
-                }
-
-                img {
-                    margin-right: -20px;
-                }
-            }
-
-            &__content {
-                float: none;
             }
         }
     }
@@ -123,7 +84,8 @@
             }
 
             &__row {
-            padding-bottom: 0.3rem;
+                padding-bottom: 0.3rem;
+
                 label, input, textarea {
                     border-radius: 18px;
                     display: inline-block;

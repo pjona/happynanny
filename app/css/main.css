@@ -181,11 +181,12 @@ h1, h2, h3 {
 
 button {
   border-radius: 17px;
-  font-size: 28.8px;
-  font-size: 1.8rem;
+  font-size: 20.8px;
+  font-size: 1.3rem;
   padding: 4px 28px;
   color: #fff;
-  margin-top: 20px; }
+  margin-top: 20px;
+  border-style: none; }
 
 @media only screen and (min-width: 0em) {
   h1 {
@@ -219,8 +220,10 @@ button {
         color: #2e3192;
         border: 1px solid #2e3192;
         padding: 2px; }
-      .header__menu__item--facebook img {
-        width: 22px; }
+      .header__menu__item--facebook {
+        margin-top: -5px; }
+        .header__menu__item--facebook img {
+          width: 22px; }
       .header__menu--open {
         background: #fff;
         width: 240px;
@@ -409,7 +412,9 @@ button {
       margin-bottom: 20px; }
     .why__content ul {
       line-height: 23.2px;
-      line-height: 1.45rem; } }
+      line-height: 1.45rem; }
+      .why__content ul a {
+        border-bottom: 1px dashed; } }
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
@@ -540,32 +545,14 @@ button {
         color: #000; }
         .offer .row.content div button:focus {
           outline: 0; }
-      .offer .row.content div h1 {
-        margin-bottom: 64px;
-        margin-bottom: 4rem; }
-  #for-parents .for__parents__content {
-    float: none; }
-    #for-parents .for__parents__content h1 {
-      margin-top: 70px;
-      text-align: left; }
-  #for-parents .for__parents__img {
-    float: right;
-    margin-top: -349px;
-    margin-right: -36px; }
-  #for-bussines .for__bussines__header {
-    float: left; }
-    #for-bussines .for__bussines__header h1 {
-      text-align: left; }
-  #for-bussines .for__bussines__img {
-    float: right;
-    padding-right: 0;
-    text-align: right; }
-    #for-bussines .for__bussines__img--footer {
-      float: none; }
-    #for-bussines .for__bussines__img img {
-      margin-right: -20px; }
-  #for-bussines .for__bussines__content {
-    float: none; }
+      .offer .row.content div ul, .offer .row.content div p {
+        text-align: left;
+        font-size: 14px; }
+      .offer .row.content div ul {
+        list-style: disc; }
+        .offer .row.content div ul li {
+          margin: 0 0 9px 18px;
+          line-height: 19px; }
   #order .modal__content {
     height: 540px; }
   #order .order__header {
@@ -651,6 +638,8 @@ button {
     margin-top: 46px; }
     .price .row {
       position: relative; }
+      .price .row h1 {
+        margin-top: 0; }
       .price .row small {
         font-size: 12.8px;
         font-size: 0.8rem; }
@@ -666,7 +655,8 @@ button {
         line-height: 0.8rem;
         margin-top: 8px; }
       .price__item:last-child {
-        margin-bottom: 12px; }
+        margin-bottom: 12px;
+        line-height: 13px; }
       .price__item span:first-child {
         float: left; }
       .price__item span:last-child {

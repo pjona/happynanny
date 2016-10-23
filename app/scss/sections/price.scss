@@ -7,6 +7,10 @@
         .row {
             position: relative;
 
+            h1 {
+                margin-top: 0;
+            }
+
             small {
                 @include rem(font-size, 0.8);
             }
@@ -24,6 +28,7 @@
 
             &:last-child {
                 margin-bottom: 12px;
+                line-height: 13px;
             }
 
             span:first-child {
