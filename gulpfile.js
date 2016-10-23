@@ -19,6 +19,8 @@ var gulpIf = require('gulp-if');
 var del = require('del');
 var runSequence = require('run-sequence');
 var notify = require("gulp-notify");
+var rev = require('gulp-rev');
+var revReplace = require('gulp-rev-replace');
 
 // Styles task
 gulp.task('sass', function() {
@@ -74,6 +76,10 @@ gulp.task('useref', function() {
         .pipe(gulpIf('*.js', uglify()))
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
+        // Asset revisioning
+        .pipe(gulpIf('*.css', rev()))
+        .pipe(gulpIf('*.js', rev()))
+        .pipe(revReplace())
         .pipe(gulp.dest('dist'))
 });
 
