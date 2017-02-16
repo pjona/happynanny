@@ -26,15 +26,19 @@
         showModal: function(event) {
             this.$displayed = $('#' + $(event.target).data('modal'));
             this.$displayed.show();
+
+            $.fn.fullpage.setAllowScrolling(false);
         },
         closeModal: function(event) {
-            if(
+            if (
                 this.$displayed !== false &&
                 this.$displayed !== ''
             ) {
                 this.$displayed.hide();
                 this.$displayed = '';
             }
+
+            $.fn.fullpage.setAllowScrolling(true);
         },
         windowsCloseModal: function(event) {
             if (

@@ -70,7 +70,7 @@
 
     #order {
         .modal__content {
-            height: 540px;
+            height: 850px;
         }
 
         .order {
@@ -78,15 +78,18 @@
                 @include rem(padding, 0, 1);
 
                 h1 {
-                    margin-top: 0;
+                    display: inline;
+                    float: left;
                     text-align: left;
+                    margin-top: 10px;
+                    margin-bottom: 0;
                 }
             }
 
             &__row {
                 padding-bottom: 0.3rem;
 
-                label, input, textarea {
+                label, input, textarea, select {
                     border-radius: 18px;
                     display: inline-block;
                     width: 100%;
@@ -109,17 +112,13 @@
                     }
                 }
 
-                img {
-                    padding-top: 10px;
-                }
-
                 label {
                     background-color: $yellowDarker;
                     text-align: center;
                     padding: 7px 0;
                 }
 
-                input, textarea {
+                input, textarea, select {
                     outline: none;
                     border-color: #000;
                     border-width: 1px;
@@ -141,6 +140,28 @@
     .offer {
         &__background__header {
             height: 250px;
+        }
+    }
+
+    #order {
+        .modal__content {
+            height: 475px;
+        }
+
+        .order {
+            &__header {
+                h1 {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__row {
+                img {
+                    padding-top: 36px;
+                    margin-bottom: -19px;
+                }
+            }
         }
     }
 }

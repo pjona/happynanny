@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Happy Nanny - opieka nad dzieckiem z edukacją na terenie trójmiasta</title>
+        <title>Happy Nanny - opieka całodzienna i okazjonalna nad dziećmi na terenie Trójmiasta i okolic</title>
         <meta name="description" content="Happy Nanny to opieka na najwyższym poziomie, dostosowana do potrzeb dziecka i rodziców. W ofercie opieka dzienna, okazjonalna, a także niania z angielskim.">
         <meta name="keywords" content="niania trójmiasto, opiekunka trójmiasto, agencja niań, agencja opiekunek, niania, nauka angielskiego, angielski dla dzieci, english nanny, babysitter" />
         <meta name="google-site-verification" content="hEdEIUrXUCCnMN-t05fKSl0n_DsTeq5hY4VAU1RjLGw" />
@@ -144,11 +144,11 @@
                             <h2>Bezpieczeństwo</h2>
                             <p>Bezpieczeństwo dzieci jest filarem naszej działalności. Nasze nianie przechodzą poniższe etapy rekrutacji:</p>
                             <ol>
+                                <li>indywidualna rozmowa rekrutacyjna sprawdzająca doświadczenie, wykształcenie oraz usposobienie kandydatki</li>
                                 <li>rozmowa kwalifikacyjna prowadzona przez doświadczonego psychologa</li>
                                 <li>obserwacja pracy niani z dziećmi prowadzona przez doświadczonego psychologa</li>
-                                <li>kurs pierwszej pomocy</li>
-                                <li>szkolenie przygotowujące do pracy w Happy Nanny</li>
-                                <li>przedstawienie zaświadczenia o niekaralności</li>
+                                <li>kurs pierwszej pomocy u dzieci i niemowląt</li>
+                                <li>autorskie szkolenie przygotowujące do pracy w Happy Nanny</li>
                             </ol>
                         </div>
                     </div>
@@ -211,12 +211,12 @@
                                 W naszej ofercie znajdą Państwo:
                             </p>
                             <ul>
-                                <li>Nianie na stałe</li>
+                                <li>Nianie na stałe - pełna rekrutacja i szkolenia dla idealnej niani (powyżej 40h miesięcznie)</li>
                                 <li>Nianie okazjonalne – na wieczory, weekendy, wydarzenia (także wesela), nagłe wypadki, urodziny, animacje</li>
                                 <li>Nianie z angielskim – alternatywa dla monotonnych kursów i korepetycji. Z nami dzieci podczas gier, zabaw, rozmów oraz ciekawych zajęć w naturalny sposób przyswoją język angielski.</li>
                             </ul>
 
-                            <!--<button class="modal__click" data-modal="order">Zamawiam</button>-->
+                            <button class="modal__click" data-modal="order">Zamawiam</button>
                         </div>
                     </div>
                     <div class="offer__footer">
@@ -251,6 +251,10 @@
                             <h1>Cennik</h1>
                             <ul>
                                 <li class="price__item">
+                                    <span>Na pełen etat (opłata rekrutacyjna)</span>
+                                    <span>indywidualnie</span>
+                                </li>
+                                <li class="price__item">
                                     <span>W ciągu dnia</span>
                                     <span>20 zł</span>
                                 </li>
@@ -272,7 +276,7 @@
                                 </li>
                                 <li class="price__item">
                                     <span>Urodziny i animacje</span>
-                                    <span>60 zł</span>
+                                    <span>od 60 zł</span>
                                 </li>
                                 <li class="price__item">
                                     <span>Całodniowo</span>
@@ -344,24 +348,55 @@
         <!-- Modal: order -->
         <div id="order" class="row modal">
             <div class="modal__content">
-                <span class="modal__close">×</span>
                 <div class="column-12 order__row order__header">
                     <h1>Formularz</h1>
+                    <span class="modal__close">×</span>
                 </div>
 
                 <form action="mail.php" method="POST">
                     <div class="column-2 order__row">
+                        <label for="input_type">Typ opieki</label>
+                    </div>
+                    <div class="column-4 order__row">
+                        <div class="select">
+                            <select name="type" id="input_type" required="required">
+                                <option value="pełen etat">pełen etat</option>
+                                <option value="dzień">dzień</option>
+                                <option value="wieczór">wieczór</option>
+                                <option value="weekend">weekend</option>
+                                <option value="wydarzenia">wydarzenia</option>
+                                <option value="niania z angielskim">niania z angielskim</option>
+                                <option value="animacje">animacje</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="column-3 order__row">
                         <label for="input_name">Imię i nazwisko</label>
                     </div>
-                    <div class="column-10 order__row">
+                    <div class="column-3 order__row">
                         <input type="text" name="name" id="input_name" required="required">
                     </div>
 
                     <div class="column-2 order__row">
-                        <label for="input_children">Imię i wiek dziecka</label>
+                        <label for="input_email">E-mail</label>
                     </div>
                     <div class="column-10 order__row">
-                        <input type="text" name="children" id="input_children" required="required">
+                        <input type="text" name="email" id="input_email">
+                    </div>
+
+                    <div class="column-2 order__row">
+                        <label for="input_phone">Telefon</label>
+                    </div>
+                    <div class="column-4 order__row">
+                        <input type="text" name="phone" id="input_phone" required="required">
+                    </div>
+
+                    <div class="column-3 order__row">
+                        <label for="input_date">Imiona oraz wiek dzieci</label>
+                    </div>
+                    <div class="column-3 order__row">
+                        <input type="text" name="date" id="input_date">
                     </div>
 
                     <div class="column-2 order__row">
@@ -372,28 +407,8 @@
                     </div>
 
                     <div class="column-2 order__row">
-                        <label for="input_email">Adres e-mailowy</label>
-                    </div>
-                    <div class="column-10 order__row">
-                        <input type="text" name="email" id="input_email">
-                    </div>
-
-                    <div class="column-2 order__row">
-                        <label for="input_phone">Numer telefonu</label>
-                    </div>
-                    <div class="column-4 order__row">
-                        <input type="text" name="phone" id="input_phone" required="required">
-                    </div>
-                    <div class="column-3 order__row">
-                        <label for="input_date">Data i czas trwania usługi</label>
-                    </div>
-                    <div class="column-3 order__row">
-                        <input type="text" name="date" id="input_date">
-                    </div>
-
-                    <div class="column-2 order__row">
                         <label for="input_body">Treść zgłoszenia</label>
-                        <img alt="Ptaszek" src="images/order_img.png">
+                        <img alt="Ptaszek" class="hide-mobile" src="images/order_img.png">
                     </div>
                     <div class="column-10 order__row">
                         <textarea name="body" id="input_body"></textarea>

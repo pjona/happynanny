@@ -1,0 +1,12 @@
+.select {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #000;
+}
+
+.select select {
+  background: transparent;
+  color: #000;
+  border: none;
+  height: 25px;
+}

@@ -73,6 +73,16 @@ a {
   text-decoration: none;
   color: #231f20; }
 
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  .hide-mobile {
+    display: none; } }
+
+/* Desktop */
+@media only screen and (min-width: 30em) {
+  .hide-mobile {
+    display: inherit; } }
+
 *, *:after, *:before {
   margin: 0;
   padding: 0;
@@ -350,7 +360,8 @@ button {
   .modal {
     display: none;
     position: fixed;
-    padding-top: 100px;
+    padding-top: 65px;
+    padding-bottom: 17px;
     z-index: 1;
     left: 0;
     top: 0;
@@ -364,7 +375,7 @@ button {
     .modal__content {
       background-color: #fff;
       margin: auto;
-      padding: 20px;
+      padding: 0;
       width: 90%;
       max-width: 70em; }
     .modal__close {
@@ -377,6 +388,24 @@ button {
         color: #000;
         text-decoration: none;
         cursor: pointer; } }
+
+/* Desktop */
+@media only screen and (min-width: 30em) {
+  .modal {
+    padding-top: 100px; }
+    .modal__content {
+      padding: 20px; } }
+
+.select {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #000; }
+
+.select select {
+  background: transparent;
+  color: #000;
+  border: none;
+  height: 25px; }
 
 /* Sections */
 /* Mobile */
@@ -554,16 +583,19 @@ button {
           margin: 0 0 9px 18px;
           line-height: 19px; }
   #order .modal__content {
-    height: 540px; }
+    height: 850px; }
   #order .order__header {
     padding: 0px 16px;
     padding: 0rem 1rem; }
     #order .order__header h1 {
-      margin-top: 0;
-      text-align: left; }
+      display: inline;
+      float: left;
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 0; }
   #order .order__row {
     padding-bottom: 0.3rem; }
-    #order .order__row label, #order .order__row input, #order .order__row textarea {
+    #order .order__row label, #order .order__row input, #order .order__row textarea, #order .order__row select {
       border-radius: 18px;
       display: inline-block;
       width: 100%; }
@@ -579,13 +611,11 @@ button {
         font-size: 16px;
         width: 100px;
         border-width: 0; }
-    #order .order__row img {
-      padding-top: 10px; }
     #order .order__row label {
       background-color: #fff200;
       text-align: center;
       padding: 7px 0; }
-    #order .order__row input, #order .order__row textarea {
+    #order .order__row input, #order .order__row textarea, #order .order__row select {
       outline: none;
       border-color: #000;
       border-width: 1px;
@@ -597,7 +627,15 @@ button {
 /* Desktop */
 @media only screen and (min-width: 30em) {
   .offer__background__header {
-    height: 250px; } }
+    height: 250px; }
+  #order .modal__content {
+    height: 475px; }
+  #order .order__header h1 {
+    margin-top: 0;
+    margin-bottom: 20px; }
+  #order .order__row img {
+    padding-top: 36px;
+    margin-bottom: -19px; } }
 
 /* Mobile */
 @media only screen and (min-width: 0em) {

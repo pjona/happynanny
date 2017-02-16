@@ -3,7 +3,8 @@
     .modal {
         display: none;
         position: fixed;
-        padding-top: 100px;
+        padding-top: 65px;
+        padding-bottom: 17px;
         z-index: 1;
         left: 0;
         top: 0;
@@ -20,7 +21,7 @@
         &__content {
             background-color: #fff;
             margin: auto;
-            padding: 20px;
+            padding: 0;
             width: 90%;
             max-width: ($gridMaxWidth+5);
         }
@@ -37,6 +38,17 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+/* Desktop */
+@media #{$breakpointMedium} {
+    .modal {
+        padding-top: 100px;
+
+        &__content {
+            padding: 20px;
         }
     }
 }

@@ -43,3 +43,17 @@ a {
 	text-decoration: none;
 	color: $black;
 }
+
+/* Mobile */
+@media #{$breakpointSmall} {
+	.hide-mobile {
+		display: none;
+	}
+}
+
+/* Desktop */
+@media #{$breakpointMedium} {
+	.hide-mobile {
+		display: inherit;
+	}
+}
