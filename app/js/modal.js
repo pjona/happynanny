@@ -9,6 +9,7 @@
             this.bindEvents();
         },
         cacheDom: function() {
+            this.$form = $('.modal__content form');
             this.$click = $('.modal__click');
             this.$close = $('.modal__close');
             this.$displayed = false;
@@ -22,6 +23,8 @@
             $(window).click(this.windowsCloseModal.bind(this));
             // close modal by esc key
             $(document).keyup(this.escCloseModal.bind(this));
+            // send form in model
+            this.$form.on('submit', this.submitForm.bind(this));
         },
         showModal: function(event) {
             this.$displayed = $('#' + $(event.target).data('modal'));
@@ -52,6 +55,17 @@
             if (event.keyCode === 27) {
                 this.closeModal();
             }
+        },
+        submitForm: function(event) {
+            event.preventDefault();
+
+            var target = $(event.target);
+            target.find('input[type="submit"]').val('Wysyłam...');
+
+            $.post(target.attr('action'), target.serialize(), function(data) {
+                target.parents('.modal__content').height('100%');
+                target.html('<div class="column-12 text-center">' + data + '</div>');
+            });
         }
     };
     modal.init();

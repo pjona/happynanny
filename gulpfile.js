@@ -85,7 +85,7 @@ gulp.task('useref', function() {
 
 // Extras
 gulp.task('extras', function () {
-    return gulp.src(['app/robots.txt', 'app/favicon.ico'])
+    return gulp.src(['app/robots.txt', 'app/favicon.ico', 'app/order.php'])
         .pipe(gulp.dest('dist'));
 });
 

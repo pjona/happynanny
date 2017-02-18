@@ -37,6 +37,7 @@
                 width: 100%;
 
                 div {
+                    padding: 140px 1.5em 1.5em;
                     vertical-align: middle;
                     display: table-cell;
                     text-align: center;
@@ -140,6 +141,12 @@
     .offer {
         &__background__header {
             height: 250px;
+        }
+
+        .row {
+            &.content div {
+                padding: 1.0em;
+            }
         }
     }
 

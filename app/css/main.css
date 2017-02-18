@@ -178,6 +178,9 @@ h1, h2, h3 {
   text-align: center;
   margin: 20px 0; }
 
+.text-center {
+  text-align: center; }
+
 .opacity {
   opacity: 0.4; }
 
@@ -318,7 +321,7 @@ button {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg); }
     .header .active, .header .highlighted {
-      font-weight: bold; } }
+      font-family: "AleoBold", "Roboto Slab"; } }
 
 /* Desktop */
 @media only screen and (min-width: 30em) {
@@ -383,7 +386,7 @@ button {
       float: right;
       font-size: 28px;
       font-size: 1.75rem;
-      font-weight: bold; }
+      font-family: "AleoBold", "Roboto Slab"; }
       .modal__close:hover, .modal__close:focus {
         color: #000;
         text-decoration: none;
@@ -566,6 +569,7 @@ button {
     top: 0;
     width: 100%; }
     .offer .row.content div {
+      padding: 140px 1.5em 1.5em;
       vertical-align: middle;
       display: table-cell;
       text-align: center; }
@@ -628,6 +632,8 @@ button {
 @media only screen and (min-width: 30em) {
   .offer__background__header {
     height: 250px; }
+  .offer .row.content div {
+    padding: 1.0em; }
   #order .modal__content {
     height: 475px; }
   #order .order__header h1 {
@@ -759,7 +765,7 @@ button {
   .contact__header {
     margin-top: 50px; }
   .contact__hours {
-    font-weight: bold; }
+    font-family: "AleoBold", "Roboto Slab"; }
   .contact__details {
     font-size: 22.8px;
     font-size: 1.425rem;

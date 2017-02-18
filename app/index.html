@@ -251,7 +251,7 @@
                             <h1>Cennik</h1>
                             <ul>
                                 <li class="price__item">
-                                    <span>Na pełen etat (opłata rekrutacyjna)</span>
+                                    <span><strong>Na pełen etat (opłata rekrutacyjna)</strong></span>
                                     <span>indywidualnie</span>
                                 </li>
                                 <li class="price__item">
@@ -271,11 +271,11 @@
                                     <span>35 zł</span>
                                 </li>
                                 <li class="price__item">
-                                    <span>Niania z angielskim</span>
+                                    <span><strong>Niania z angielskim</strong></span>
                                     <span>45 zł</span>
                                 </li>
                                 <li class="price__item">
-                                    <span>Urodziny i animacje</span>
+                                    <span><strong>Urodziny i animacje</strong></span>
                                     <span>od 60 zł</span>
                                 </li>
                                 <li class="price__item">
@@ -353,7 +353,7 @@
                     <span class="modal__close">×</span>
                 </div>
 
-                <form action="mail.php" method="POST">
+                <form action="order.php" method="POST">
                     <div class="column-2 order__row">
                         <label for="input_type">Typ opieki</label>
                     </div>
@@ -382,7 +382,7 @@
                         <label for="input_email">E-mail</label>
                     </div>
                     <div class="column-10 order__row">
-                        <input type="text" name="email" id="input_email">
+                        <input type="email" name="email" id="input_email">
                     </div>
 
                     <div class="column-2 order__row">
@@ -393,22 +393,22 @@
                     </div>
 
                     <div class="column-3 order__row">
-                        <label for="input_date">Imiona oraz wiek dzieci</label>
+                        <label for="input_children">Imiona oraz wiek dzieci</label>
                     </div>
                     <div class="column-3 order__row">
-                        <input type="text" name="date" id="input_date">
+                        <input type="text" name="children" id="input_children">
                     </div>
 
                     <div class="column-2 order__row">
                         <label for="input_address">Adres</label>
                     </div>
                     <div class="column-10 order__row">
-                        <input type="text" name="address" id="input_address" required="required">
+                        <input type="text" name="address" id="input_address">
                     </div>
 
                     <div class="column-2 order__row">
                         <label for="input_body">Treść zgłoszenia</label>
-                        <img alt="Ptaszek" class="hide-mobile" src="" data-src="images/order_img.png">
+                        <img alt="Ptaszek" class="hide-mobile" src="images/order_img.png">
                     </div>
                     <div class="column-10 order__row">
                         <textarea name="body" id="input_body"></textarea>

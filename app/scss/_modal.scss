@@ -30,7 +30,7 @@
             color: #aaa;
             float: right;
             @include rem(font-size, 1.75);
-            font-weight: bold;
+            font-family: $fontBold;
 
             &:hover,
             &:focus {
