@@ -6,3 +6,8 @@ Website: [happynanny.pl](http://happynanny.pl/)
 ```
 npm install
 ```
+
+## Build production version
+```
+gulp build
+```
