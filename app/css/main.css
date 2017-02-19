@@ -374,7 +374,11 @@ button {
     background-color: black;
     background-color: rgba(0, 0, 0, 0.4); }
     .modal__click {
+      background-color: #cbe2f6;
+      color: #000;
       cursor: pointer; }
+      .modal__click:focus {
+        outline: 0; }
     .modal__content {
       background-color: #fff;
       margin: auto;
@@ -573,11 +577,6 @@ button {
       vertical-align: middle;
       display: table-cell;
       text-align: center; }
-      .offer .row.content div button {
-        background-color: #cbe2f6;
-        color: #000; }
-        .offer .row.content div button:focus {
-          outline: 0; }
       .offer .row.content div ul, .offer .row.content div p {
         text-align: left;
         font-size: 14px; }
@@ -770,8 +769,7 @@ button {
     font-size: 22.8px;
     font-size: 1.425rem;
     line-height: 30px;
-    line-height: 1.875rem;
-    margin-bottom: 40px; }
+    line-height: 1.875rem; }
   .contact__footer {
     max-height: 100%;
     margin-top: -115px; } }

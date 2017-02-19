@@ -35,7 +35,6 @@
         &__details {
             @include rem(font-size, 1.425);
             @include rem(line-height, 1.875);
-            margin-bottom: 40px;
         }
 
         &__footer {

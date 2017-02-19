@@ -15,7 +15,13 @@
         background-color: rgba(0,0,0,0.4);
 
         &__click {
+            background-color: $blueLigher;
+            color: #000;
             cursor: pointer;
+
+            &:focus {
+                outline:0;
+            }
         }
 
         &__content {

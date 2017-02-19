@@ -42,15 +42,6 @@
                     display: table-cell;
                     text-align: center;
 
-                    button {
-                        background-color: $blueLigher;
-                        color: #000;
-
-                        &:focus {
-                            outline:0;
-                        }
-                    }
-
                     ul, p {
                         text-align: left;
                         font-size: 14px;
