@@ -9,7 +9,7 @@ if (empty($_POST)) {
 // composer autoloader
 require $rootDir . 'vendor/autoload.php';
 
-$mail = new PHPMailer;
+$mail = new PHPMailer();
 $dotEnv = new Dotenv\Dotenv($rootDir);
 $dotEnv->load();
 
@@ -40,15 +40,15 @@ $address = isset($_POST['address']) ? $_POST['address'] : '';
 $body = isset($_POST['body']) ? $_POST['body'] : '';
 
 $mail->Subject = 'Nowe zamówienie ze strony happynanny.pl';
-$mail->Body = "
-    Typ opieki: " . $type . "<br>
-    Imię: " . $name . "<br>
-    E-mail: " . $email . "<br>
-    Telefon: " . $phone . "<br>
-    Dzieci: " . $children . "<br>
-    Adres: " . $address . "<br>
-    Treść: " . $body . "<br>
-";
+$mail->Body = '
+    Typ opieki: ' . $type . '<br>
+    Imię: ' . $name . '<br>
+    E-mail: ' . $email . '<br>
+    Telefon: ' . $phone . '<br>
+    Dzieci: ' . $children . '<br>
+    Adres: ' . $address . '<br>
+    Treść: ' . $body . '<br>
+';
 
 if (!$mail->send()) {
     $return = 'Wiadomość nie została wysłana'; // $mail->ErrorInfo
