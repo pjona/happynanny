@@ -68,16 +68,6 @@ var nav = (function() {
         }
     };
 
-    var bindEvents = function() {
-        // Show/close menu when clicking hamburger on mobile
-        self.$hamburger.bind('click', clickHambuger);
-        // Click/hover on menu with submenu
-        self.$menuItemHasSubmenu.bind('click mouseenter', showSubmenu);
-        self.$menuItemHasSubmenu.bind('mouseleave', hideSubmenu);
-        // Disable auto scrolling on mobile
-        self.$window.bind('resize', responsive);
-    };
-
     // Responsive
     var responsive = function() {
         var autoScrolling = true;
@@ -86,6 +76,16 @@ var nav = (function() {
         }
 
         $.fn.fullpage.setAutoScrolling(autoScrolling);
+    };
+
+    var bindEvents = function() {
+        // Show/close menu when clicking hamburger on mobile
+        self.$hamburger.bind('click', clickHambuger);
+        // Click/hover on menu with submenu
+        self.$menuItemHasSubmenu.bind('click mouseenter', showSubmenu);
+        self.$menuItemHasSubmenu.bind('mouseleave', hideSubmenu);
+        // Disable auto scrolling on mobile
+        self.$window.bind('resize', responsive);
     };
 
     var load = function() {
