@@ -4,28 +4,6 @@
 // Modal
 (function() {
     var modal = {
-        init: function() {
-            this.cacheDom();
-            this.bindEvents();
-        },
-        cacheDom: function() {
-            this.$form = $('.modal__content form');
-            this.$click = $('.modal__click');
-            this.$close = $('.modal__close');
-            this.$displayed = false;
-        },
-        bindEvents: function() {
-            // show modal
-            this.$click.click(this.showModal.bind(this));
-            // close modal by cross
-            this.$close.click(this.closeModal.bind(this));
-            // close modal by clicking outsite of modal
-            $(window).click(this.windowsCloseModal.bind(this));
-            // close modal by esc key
-            $(document).keyup(this.escCloseModal.bind(this));
-            // send form in model
-            this.$form.on('submit', this.submitForm.bind(this));
-        },
         showModal: function(event) {
             this.$displayed = $('#' + $(event.target).data('modal'));
             this.$displayed.show();
@@ -66,6 +44,28 @@
                 target.parents('.modal__content').height('100%');
                 target.html('<div class="column-12 text-center">' + data + '</div>');
             });
+        },
+        bindEvents: function() {
+            // show modal
+            this.$click.click(this.showModal.bind(this));
+            // close modal by cross
+            this.$close.click(this.closeModal.bind(this));
+            // close modal by clicking outsite of modal
+            $(window).click(this.windowsCloseModal.bind(this));
+            // close modal by esc key
+            $(document).keyup(this.escCloseModal.bind(this));
+            // send form in model
+            this.$form.on('submit', this.submitForm.bind(this));
+        },
+        cacheDom: function() {
+            this.$form = $('.modal__content form');
+            this.$click = $('.modal__click');
+            this.$close = $('.modal__close');
+            this.$displayed = false;
+        },
+        init: function() {
+            this.cacheDom();
+            this.bindEvents();
         }
     };
     modal.init();

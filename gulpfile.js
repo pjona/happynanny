@@ -31,12 +31,6 @@ gulp.task('sass', function() {
 });
 
 // Javascript task
-gulp.task('jshint', function() {
-    return gulp.src('./app/js/*.js')
-        .pipe(jshint())
-        .pipe(notify(notifyJsHint));
-});
-
 var notifyJsHint = function (file) {
     if (file.jshint.success) {
         // Notify only on error
@@ -52,6 +46,12 @@ var notifyJsHint = function (file) {
     return file.relative + " (" + file.jshint.results.length + " errors)\n" + errors;
 };
 
+gulp.task('jshint', function() {
+    return gulp.src('./app/js/*.js')
+        .pipe(jshint())
+        .pipe(notify(notifyJsHint));
+});
+
 // Images task
 gulp.task('images', function() {
     return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
@@ -63,7 +63,7 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
-})
+});
 
 gulp.task('clean:dist', function() {
     return del.sync('dist');
