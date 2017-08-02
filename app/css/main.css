@@ -257,7 +257,6 @@ button {
             width: 0;
             height: 0;
             margin-left: 4px;
-            -webkit-transition: 0.2s ease-in-out;
             transition: 0.2s ease-in-out;
             -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -286,7 +285,6 @@ button {
       position: fixed;
       -webkit-transform: rotate(0deg);
       transform: rotate(0deg);
-      -webkit-transition: 0.5s ease-in-out;
       transition: 0.5s ease-in-out;
       cursor: pointer; }
       .header__hamburger span {
@@ -299,7 +297,6 @@ button {
         left: 0;
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
-        -webkit-transition: 0.25s ease-in-out;
         transition: 0.25s ease-in-out; }
         .header__hamburger span:nth-child(1) {
           top: 0px; }
